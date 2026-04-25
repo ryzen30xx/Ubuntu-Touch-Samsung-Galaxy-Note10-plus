@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  halium-builder:
+    build: .
+    container_name: halium-builder
+    volumes:
+      - ../:/home/build/halium/Ubuntu-Touch-d2s
+      # The workspace volume where Halium sources will be downloaded
+      # We don't mount this directly to the Mac to avoid terrible I/O performance
+      # and APFS case-insensitivity issues.
+      - halium-workspace:/home/build/halium
+    working_dir: /home/build/halium
+    command: tail -f /dev/null
+
+volumes:
+  halium-workspace:
+    # A dedicated Docker volume ensures a case-sensitive file system
+    # and fast I/O inside the container.

@@ -1,0 +1,1 @@
+allow lhd sysfs_sensors_writable:file rw_file_perms;

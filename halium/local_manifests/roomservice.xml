@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Samsung Galaxy Note 10+ (d2s) Halium 11 (Android 11 / LineageOS 18.1 base) -->
+
+    <!-- Device Trees -->
+    <project name="LineageOS/android_device_samsung_d2s" path="device/samsung/d2s" remote="github" revision="lineage-18.1" />
+    <project name="LineageOS/android_device_samsung_exynos9820-common" path="device/samsung/exynos9820-common" remote="github" revision="lineage-18.1" />
+
+    <!-- Kernel -->
+    <project name="LineageOS/android_kernel_samsung_exynos9820" path="kernel/samsung/exynos9820" remote="github" revision="lineage-18.1" />
+
+    <!-- Vendor Blobs -->
+    <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="lineage-18.1" />
+
+    <!-- Hardware specifics -->
+    <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-18.1" />
+
+</manifest>
