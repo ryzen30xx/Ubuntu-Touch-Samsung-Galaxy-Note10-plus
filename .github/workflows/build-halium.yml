@@ -24,7 +24,7 @@ jobs:
           remove-haskell: 'true'
 
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Build Dependencies
         run: |
@@ -44,13 +44,13 @@ jobs:
         run: ./build.sh
 
       - name: Upload Halium Boot Image
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: halium-boot.img
           path: workspace/out/target/product/d2s/halium-boot.img
 
       - name: Upload System Image
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: system.img
           path: workspace/out/target/product/d2s/system.img
