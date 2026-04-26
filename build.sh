@@ -50,6 +50,7 @@ cp -r "$REPO_DIR/halium" "$WORKSPACE/"
 echo ">>> Building halium-boot and systemimage..."
 export LINEAGE_SKIP_DEVICE_CHECK=true
 export SKIP_ROOMSERVICE=true
+export LINEAGE_BUILD_OFFLINE=true
 source build/envsetup.sh
 
 # Sử dụng lunch với sản phẩm cụ thể
