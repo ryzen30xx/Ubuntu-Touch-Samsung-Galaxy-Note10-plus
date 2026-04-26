@@ -19,20 +19,22 @@ cd "$WORKSPACE"
 
 # 1. Initialize Repo
 echo ">>> Initializing Halium 11 Repository..."
-repo init -u https://github.com/Halium/android -b halium-11.0 --depth=1
+if [ ! -d ".repo" ]; then
+    repo init -u https://github.com/Halium/android -b halium-11.0 --depth=1
+fi
 
 # 2. Setup Local Manifest
 echo ">>> Setting up local manifests..."
 mkdir -p .repo/local_manifests
 cp "$REPO_DIR/halium/local_manifests/roomservice.xml" .repo/local_manifests/
-cp -r "$REPO_DIR/halium" "$WORKSPACE/"
 
 # 3. Sync Sources
 echo ">>> Syncing sources (This will take a while)..."
 repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
-# 4. Copy patched trees
+# 4. Apply our patched device tree & kernel
 echo ">>> Applying our patched device tree & kernel..."
+# Chúng ta copy SAU KHI sync để đảm bảo không bị repo sync ghi đè
 rm -rf device/samsung/d2s
 rm -rf kernel/samsung/exynos9820
 rm -rf device/samsung/exynos9820-common
@@ -41,11 +43,18 @@ cp -r "$REPO_DIR/sources/device/samsung/d2s" device/samsung/d2s
 cp -r "$REPO_DIR/sources/device/samsung/exynos9820-common" device/samsung/exynos9820-common
 cp -r "$REPO_DIR/sources/kernel/samsung/exynos9820" kernel/samsung/exynos9820
 
+# Sao chép thư mục halium vào workspace để có fstab
+cp -r "$REPO_DIR/halium" "$WORKSPACE/"
+
 # 5. Build Halium
 echo ">>> Building halium-boot and systemimage..."
 export LINEAGE_SKIP_DEVICE_CHECK=true
+export SKIP_ROOMSERVICE=true
 source build/envsetup.sh
+
+# Sử dụng lunch với sản phẩm cụ thể
 lunch halium_d2s-userdebug
+
 mka halium-boot systemimage
 
 echo ">>> Build completed successfully! Output is in out/target/product/d2s/"

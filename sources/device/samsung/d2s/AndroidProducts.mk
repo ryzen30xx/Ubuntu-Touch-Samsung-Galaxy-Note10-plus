@@ -15,13 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    device/samsung/d2s/lineage_d2s.mk \
-    device/samsung/d2s/halium_d2s.mk
+    $(LOCAL_DIR)/lineage_d2s.mk \
+    $(LOCAL_DIR)/halium_d2s.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_d2s-eng \
-    lineage_d2s-user \
-    lineage_d2s-userdebug \
-    halium_d2s-eng \
-    halium_d2s-user \
-    halium_d2s-userdebug
+    halium_d2s-userdebug \
+    lineage_d2s-userdebug
