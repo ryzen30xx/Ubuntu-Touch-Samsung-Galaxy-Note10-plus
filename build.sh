@@ -34,10 +34,12 @@ repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
 # 4. Apply our patched device tree & kernel
 echo ">>> Applying our patched device tree & kernel..."
-# Vá lỗi Soong: biến PATH_OVERRIDE_SOONG không xác định
+# Vá lỗi Soong: loại bỏ các biến không xác định của LineageOS
 if [ -f "vendor/lineage/build/soong/Android.bp" ]; then
     echo ">>> Patching vendor/lineage/build/soong/Android.bp..."
     sed -i 's/$(PATH_OVERRIDE_SOONG)//g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(KERNEL_MAKE_CMD)//g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(KERNEL_MAKE_FLAGS)//g' vendor/lineage/build/soong/Android.bp
 fi
 
 # Chúng ta copy SAU KHI sync để đảm bảo không bị repo sync ghi đè
