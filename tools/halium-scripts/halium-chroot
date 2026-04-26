@@ -1,0 +1,73 @@
+#!/bin/bash
+#
+# This script will:
+# - mount rootfs.img, system.img and /data
+# - enter an interactive shell in the chroot or execute
+#   a given command
+# - umount rootfs, system and /data
+#
+# Usage:
+#
+# To get an interactive shell in the chroot simply enter:
+# ./halium-chroot
+#
+# To directly execute a non-interactive program run:
+# ./halium-chroot my-program
+#
+
+mount_all()
+{
+	adb shell <<-SHELL
+		mkdir -p /target
+		mount /data/rootfs.img /target
+		mount /data/system.img /target/system
+		mount --bind /data /target/data
+		exit
+	SHELL
+}
+
+umount_all()
+{
+	adb shell <<-SHELL
+		umount -rl /target
+		exit
+	SHELL
+}
+
+mount_all > /dev/null
+
+CHROOT='TERM=linux HOME=/root PATH=/sbin:/bin:/usr/sbin:/usr/bin:$PATH chroot /target'
+LINES=$(tput lines)
+COLUMNS=$(tput cols)
+
+if [ $# -eq 0 ]
+then # Interactive shell
+	if [ $(which tmux) ]
+	then # with tmux installed
+		TARGET="halium-adb-$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)"
+		if [ $TMUX ]
+		then # create new window if we are in a tmux session
+			tmux new-window -n $TARGET -d 'adb shell'
+			SWITCH='select-window'
+		else # create a new tmux session if none exists
+			tmux new-session -s $TARGET -d 'adb shell'
+			SWITCH='attach-session'
+			let LINES-=1
+		fi
+		sleep 1
+		tmux send-keys -t $TARGET "export LINES=${LINES}; export COLUMNS=${COLUMNS}"$'\n'
+		tmux send-keys -t $TARGET "${CHROOT} /bin/bash; exit"$'\n'
+		tmux $SWITCH -t $TARGET
+	else # without tmux installed
+		echo 'To automatically get an interactive chroot session, install'
+		echo 'The program "tmux". To enter the chroot environment run:'
+		echo
+		echo "${CHROOT} /bin/bash"
+		echo
+		adb shell
+	fi
+else # Non-interactive command
+	adb shell "${CHROOT} /bin/bash -c \"${@}\""
+fi
+
+umount_all > /dev/null
