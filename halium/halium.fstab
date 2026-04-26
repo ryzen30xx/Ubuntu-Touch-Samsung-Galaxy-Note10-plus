@@ -1,0 +1,14 @@
+# Ubuntu Touch fstab (Halium 11) for Samsung Galaxy Note 10+ (d2s)
+# <src>                                              <mnt_point>     <type>  <mnt_flags và options>                               <fs_mgr_flags>
+
+/dev/block/by-name/system         /               ext4    ro,barrier=1                                        wait
+/dev/block/by-name/vendor         /vendor         ext4    ro,barrier=1                                        wait
+/dev/block/by-name/userdata       /data           ext4    rw,nosuid,nodev,noatime,nodiratime,barrier=1,errors=panic,discard    wait,check,formattable
+/dev/block/by-name/cache          /cache          ext4    rw,nosuid,nodev,noatime,barrier=1,errors=panic        wait,check
+/dev/block/by-name/efs            /efs            ext4    rw,nosuid,nodev,noatime,barrier=1,errors=panic        wait,check
+
+# Phân vùng Firmware (Modem/Radio)
+/dev/block/by-name/radio          /firmware       vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337    wait
+
+# Cấu hình ZRAM (Tùy chọn cho Ubuntu Touch)
+/dev/block/zram0                  none            swap    defaults                                            zramsize=2147483648
