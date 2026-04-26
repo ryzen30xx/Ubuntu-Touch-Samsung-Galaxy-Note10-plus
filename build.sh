@@ -25,6 +25,7 @@ repo init -u https://github.com/Halium/android -b halium-11.0 --depth=1
 echo ">>> Setting up local manifests..."
 mkdir -p .repo/local_manifests
 cp "$REPO_DIR/halium/local_manifests/roomservice.xml" .repo/local_manifests/
+cp -r "$REPO_DIR/halium" "$WORKSPACE/"
 
 # 3. Sync Sources
 echo ">>> Syncing sources (This will take a while)..."
@@ -42,6 +43,7 @@ cp -r "$REPO_DIR/sources/kernel/samsung/exynos9820" kernel/samsung/exynos9820
 
 # 5. Build Halium
 echo ">>> Building halium-boot and systemimage..."
+export LINEAGE_SKIP_DEVICE_CHECK=true
 source build/envsetup.sh
 lunch halium_d2s-userdebug
 mka halium-boot systemimage
