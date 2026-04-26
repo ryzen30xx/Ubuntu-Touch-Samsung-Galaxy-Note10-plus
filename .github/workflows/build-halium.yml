@@ -8,6 +8,7 @@ on:
     paths:
       - 'halium/**'
       - 'sources/**'
+      - 'build.sh'
 
 jobs:
   build:
