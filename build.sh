@@ -44,6 +44,7 @@ if [ -f "vendor/lineage/build/soong/Android.bp" ]; then
     sed -i 's/$(PATH_OVERRIDE_SOONG)//g' vendor/lineage/build/soong/Android.bp
     sed -i 's/$(KERNEL_MAKE_CMD)//g' vendor/lineage/build/soong/Android.bp
     sed -i 's/$(KERNEL_MAKE_FLAGS)//g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(TARGET_KERNEL_SOURCE)/kernel\/samsung\/exynos9820/g' vendor/lineage/build/soong/Android.bp
 fi
 
 # Chúng ta copy SAU KHI sync để đảm bảo không bị repo sync ghi đè
