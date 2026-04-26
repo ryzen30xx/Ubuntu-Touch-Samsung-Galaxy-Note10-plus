@@ -34,6 +34,10 @@ repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
 # 4. Apply our patched device tree & kernel
 echo ">>> Applying our patched device tree & kernel..."
+# Xóa các thư mục .git để tiết kiệm dung lượng đĩa (rất quan trọng cho CI)
+echo ">>> Pruning .git directories to save space..."
+find . -name ".git" -type d -prune -exec rm -rf {} +
+
 # Vá lỗi Soong: loại bỏ các biến không xác định của LineageOS
 if [ -f "vendor/lineage/build/soong/Android.bp" ]; then
     echo ">>> Patching vendor/lineage/build/soong/Android.bp..."
@@ -59,11 +63,14 @@ echo ">>> Building halium-boot and systemimage..."
 export LINEAGE_SKIP_DEVICE_CHECK=true
 export SKIP_ROOMSERVICE=true
 export LINEAGE_BUILD_OFFLINE=true
+# Giới hạn RAM cho Java (Soong/Metalava)
+export _JAVA_OPTIONS="-Xmx4g"
 source build/envsetup.sh
 
 # Sử dụng lunch với sản phẩm cụ thể
 lunch halium_d2s-userdebug
 
-mka halium-boot systemimage
+# Giới hạn số luồng biên dịch xuống 2 để tránh OOM
+mka -j$(nproc) halium-boot systemimage
 
 echo ">>> Build completed successfully! Output is in out/target/product/d2s/"
