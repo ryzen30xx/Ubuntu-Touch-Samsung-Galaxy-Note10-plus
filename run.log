@@ -1,0 +1,958 @@
+build	UNKNOWN STEP	﻿2026-04-25T19:04:42.9765023Z Current runner version: '2.333.1'
+build	UNKNOWN STEP	2026-04-25T19:04:42.9790852Z ##[group]Runner Image Provisioner
+build	UNKNOWN STEP	2026-04-25T19:04:42.9791684Z Hosted Compute Agent
+build	UNKNOWN STEP	2026-04-25T19:04:42.9792180Z Version: 20260213.493
+build	UNKNOWN STEP	2026-04-25T19:04:42.9792941Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+build	UNKNOWN STEP	2026-04-25T19:04:42.9793625Z Build Date: 2026-02-13T00:28:41Z
+build	UNKNOWN STEP	2026-04-25T19:04:42.9794274Z Worker ID: {348d2feb-9426-455a-af89-282a81c79e5d}
+build	UNKNOWN STEP	2026-04-25T19:04:42.9795020Z Azure Region: westcentralus
+build	UNKNOWN STEP	2026-04-25T19:04:42.9795621Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:04:42.9797082Z ##[group]Operating System
+build	UNKNOWN STEP	2026-04-25T19:04:42.9797790Z Ubuntu
+build	UNKNOWN STEP	2026-04-25T19:04:42.9798268Z 22.04.5
+build	UNKNOWN STEP	2026-04-25T19:04:42.9798695Z LTS
+build	UNKNOWN STEP	2026-04-25T19:04:42.9799234Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:04:42.9799698Z ##[group]Runner Image
+build	UNKNOWN STEP	2026-04-25T19:04:42.9800242Z Image: ubuntu-22.04
+build	UNKNOWN STEP	2026-04-25T19:04:42.9800762Z Version: 20260413.88.1
+build	UNKNOWN STEP	2026-04-25T19:04:42.9802002Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260413.88/images/ubuntu/Ubuntu2204-Readme.md
+build	UNKNOWN STEP	2026-04-25T19:04:42.9803490Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260413.88
+build	UNKNOWN STEP	2026-04-25T19:04:42.9804414Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:04:42.9805442Z ##[group]GITHUB_TOKEN Permissions
+build	UNKNOWN STEP	2026-04-25T19:04:42.9807687Z Contents: read
+build	UNKNOWN STEP	2026-04-25T19:04:42.9808285Z Metadata: read
+build	UNKNOWN STEP	2026-04-25T19:04:42.9808749Z Packages: read
+build	UNKNOWN STEP	2026-04-25T19:04:42.9809394Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:04:42.9811602Z Secret source: Actions
+build	UNKNOWN STEP	2026-04-25T19:04:42.9812302Z Prepare workflow directory
+build	UNKNOWN STEP	2026-04-25T19:04:43.0150210Z Prepare all required actions
+build	UNKNOWN STEP	2026-04-25T19:04:43.0188787Z Getting action download info
+build	UNKNOWN STEP	2026-04-25T19:04:43.4493833Z Download action repository 'easimon/maximize-build-space@master' (SHA:c28619d8999a147d5e09c1199f84ff6af6ad5794)
+build	UNKNOWN STEP	2026-04-25T19:04:44.0007025Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build	UNKNOWN STEP	2026-04-25T19:04:44.0392151Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	UNKNOWN STEP	2026-04-25T19:04:44.3228550Z Complete job name: build
+build	UNKNOWN STEP	2026-04-25T19:04:44.4132909Z ##[group]Run easimon/maximize-build-space@master
+build	UNKNOWN STEP	2026-04-25T19:04:44.4134256Z with:
+build	UNKNOWN STEP	2026-04-25T19:04:44.4134929Z   root-reserve-mb: 8192
+build	UNKNOWN STEP	2026-04-25T19:04:44.4135706Z   swap-size-mb: 8192
+build	UNKNOWN STEP	2026-04-25T19:04:44.4136614Z   remove-dotnet: true
+build	UNKNOWN STEP	2026-04-25T19:04:44.4137377Z   remove-android: true
+build	UNKNOWN STEP	2026-04-25T19:04:44.4138126Z   remove-haskell: true
+build	UNKNOWN STEP	2026-04-25T19:04:44.4138890Z   temp-reserve-mb: 100
+build	UNKNOWN STEP	2026-04-25T19:04:44.4139670Z   overprovision-lvm: false
+build	UNKNOWN STEP	2026-04-25T19:04:44.4140567Z   build-mount-path-ownership: runner:runner
+build	UNKNOWN STEP	2026-04-25T19:04:44.4141568Z   pv-loop-path: /pv.img
+build	UNKNOWN STEP	2026-04-25T19:04:44.4142409Z   tmp-pv-loop-path: /mnt/tmp-pv.img
+build	UNKNOWN STEP	2026-04-25T19:04:44.4143323Z   remove-codeql: false
+build	UNKNOWN STEP	2026-04-25T19:04:44.4144096Z   remove-docker-images: false
+build	UNKNOWN STEP	2026-04-25T19:04:44.4145150Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:04:44.4256961Z ##[group]Run echo "Memory and swap:"
+build	UNKNOWN STEP	2026-04-25T19:04:44.4258028Z [36;1mecho "Memory and swap:"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4258961Z [36;1msudo free -h[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4259758Z [36;1mecho[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4260484Z [36;1msudo swapon --show[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4261302Z [36;1mecho[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4261961Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4262645Z [36;1mecho "Available storage:"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4263521Z [36;1msudo df -h[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4264244Z [36;1mecho[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.4339998Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+build	UNKNOWN STEP	2026-04-25T19:04:44.4341162Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:04:44.4497026Z Memory and swap:
+build	UNKNOWN STEP	2026-04-25T19:04:44.4570180Z                total        used        free      shared  buff/cache   available
+build	UNKNOWN STEP	2026-04-25T19:04:44.4572164Z Mem:            15Gi       532Mi        12Gi        38Mi       2.4Gi        14Gi
+build	UNKNOWN STEP	2026-04-25T19:04:44.4573960Z Swap:          3.0Gi          0B       3.0Gi
+build	UNKNOWN STEP	2026-04-25T19:04:44.4581296Z 
+build	UNKNOWN STEP	2026-04-25T19:04:44.4654350Z NAME      TYPE SIZE USED PRIO
+build	UNKNOWN STEP	2026-04-25T19:04:44.4655885Z /swapfile file   3G   0B   -2
+build	UNKNOWN STEP	2026-04-25T19:04:44.4664637Z 
+build	UNKNOWN STEP	2026-04-25T19:04:44.4665321Z Available storage:
+build	UNKNOWN STEP	2026-04-25T19:04:44.5040349Z Filesystem      Size  Used Avail Use% Mounted on
+build	UNKNOWN STEP	2026-04-25T19:04:44.5041708Z /dev/root       146G   56G   90G  39% /
+build	UNKNOWN STEP	2026-04-25T19:04:44.5043068Z tmpfs           7.9G  172K  7.9G   1% /dev/shm
+build	UNKNOWN STEP	2026-04-25T19:04:44.5044071Z tmpfs           3.2G  1.1M  3.2G   1% /run
+build	UNKNOWN STEP	2026-04-25T19:04:44.5045041Z tmpfs           5.0M     0  5.0M   0% /run/lock
+build	UNKNOWN STEP	2026-04-25T19:04:44.5046190Z efivarfs        128M   34K  128M   1% /sys/firmware/efi/efivars
+build	UNKNOWN STEP	2026-04-25T19:04:44.5047614Z /dev/sda15      105M  6.1M   99M   6% /boot/efi
+build	UNKNOWN STEP	2026-04-25T19:04:44.5048644Z tmpfs           1.6G   12K  1.6G   1% /run/user/1001
+build	UNKNOWN STEP	2026-04-25T19:04:44.5050579Z 
+build	UNKNOWN STEP	2026-04-25T19:04:44.5188589Z ##[group]Run set -euo pipefail
+build	UNKNOWN STEP	2026-04-25T19:04:44.5189572Z [36;1mset -euo pipefail[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5190368Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5191031Z [36;1mBUILD_MOUNT_PATH=""[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5191951Z [36;1mif [[ -z "${BUILD_MOUNT_PATH}" ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5193084Z [36;1m  BUILD_MOUNT_PATH="${GITHUB_WORKSPACE}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5194051Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5194703Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5195363Z [36;1mecho "Arguments:"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5196146Z [36;1mecho[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5197009Z [36;1mecho "  Root reserve:      8192 MiB"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5198090Z [36;1mecho "  Temp reserve:      100 MiB"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5199189Z [36;1mecho "  Swap space:        8192 MiB"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5200316Z [36;1mecho "  Overprovision LVM: false"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5201449Z [36;1mecho "  Mount path:        ${BUILD_MOUNT_PATH}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5202538Z [36;1mecho "  Root PV loop path: /pv.img"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5203641Z [36;1mecho "  Temp PV loop path: /mnt/tmp-pv.img"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5204687Z [36;1mecho -n "  Removing:     "[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5205581Z [36;1mif [[ true == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5206723Z [36;1m  echo -n "dotnet "[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5207541Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5208514Z [36;1mif [[ true == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5209427Z [36;1m  echo -n "android "[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5210224Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5210889Z [36;1mif [[ true == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5211788Z [36;1m  echo -n "haskell "[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5212569Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5213256Z [36;1mif [[ false == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5214142Z [36;1m  echo -n "codeql "[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5214919Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5215593Z [36;1mif [[ false == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5216635Z [36;1m  echo -n "docker "[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5217413Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5218047Z [36;1mecho[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5218698Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5219621Z [36;1m# store owner of $GITHUB_WORKSPACE in case the action deletes it[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5221061Z [36;1mWORKSPACE_OWNER="$(stat -c '%U:%G' "${GITHUB_WORKSPACE}")"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5222205Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5222977Z [36;1m# ensure mount path exists before the action[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5224047Z [36;1msudo mkdir -p "${BUILD_MOUNT_PATH}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5226156Z [36;1msudo find "${BUILD_MOUNT_PATH}" -maxdepth 0 ! -empty -exec echo 'WARNING: directory [{}] is not empty, data loss might occur. Content:' \; -exec ls -al "{}" \;[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5228470Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5229194Z [36;1mecho "Removing unwanted software... "[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5230182Z [36;1mif [[ true == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5231093Z [36;1m  sudo rm -rf /usr/share/dotnet[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5231966Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5232637Z [36;1mif [[ true == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5233567Z [36;1m  sudo rm -rf /usr/local/lib/android[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5234475Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5235131Z [36;1mif [[ true == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5236008Z [36;1m  sudo rm -rf /opt/ghc[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5237103Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5237792Z [36;1mif [[ false == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5238772Z [36;1m  sudo rm -rf /opt/hostedtoolcache/CodeQL[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5239729Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5240400Z [36;1mif [[ false == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5241360Z [36;1m  sudo docker image prune --all --force[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5242308Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5242941Z [36;1mecho "... done"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5243675Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5244298Z [36;1mVG_NAME=buildvg[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5245031Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5245917Z [36;1m# github runners have an active swap file in /mnt/swapfile[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5247749Z [36;1m# we want to reuse the temp disk, so first unmount swap and clean the temp disk[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5249207Z [36;1mecho "Unmounting and removing swap file."[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5250360Z [36;1msudo swapoff -a[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5251171Z [36;1msudo rm -f /mnt/swapfile[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5252008Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5252683Z [36;1mecho "Creating LVM Volume."[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5253631Z [36;1mecho "  Creating LVM PV on root fs."[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5254630Z [36;1m# create loop pv image on root fs[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5255606Z [36;1mROOT_RESERVE_KB=$(expr 8192 \* 1024)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5257000Z [36;1mROOT_FREE_KB=$(df --block-size=1024 --output=avail / | tail -1)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5258433Z [36;1mROOT_LVM_SIZE_KB=$(expr $ROOT_FREE_KB - $ROOT_RESERVE_KB)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5259771Z [36;1mROOT_LVM_SIZE_BYTES=$(expr $ROOT_LVM_SIZE_KB \* 1024)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5261252Z [36;1msudo touch "/pv.img" && sudo fallocate -z -l "${ROOT_LVM_SIZE_BYTES}" "/pv.img"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5262871Z [36;1mexport ROOT_LOOP_DEV=$(sudo losetup --find --show "/pv.img")[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5264113Z [36;1msudo pvcreate -f "${ROOT_LOOP_DEV}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5265028Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5265694Z [36;1m# create pv on temp disk[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5266903Z [36;1mecho "  Creating LVM PV on temp fs."[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5267918Z [36;1mTMP_RESERVE_KB=$(expr 100 \* 1024)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5269116Z [36;1mTMP_FREE_KB=$(df --block-size=1024 --output=avail /mnt | tail -1)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5270511Z [36;1mTMP_LVM_SIZE_KB=$(expr $TMP_FREE_KB - $TMP_RESERVE_KB)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5271781Z [36;1mTMP_LVM_SIZE_BYTES=$(expr $TMP_LVM_SIZE_KB \* 1024)[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5273384Z [36;1msudo touch "/mnt/tmp-pv.img" && sudo fallocate -z -l "${TMP_LVM_SIZE_BYTES}" "/mnt/tmp-pv.img"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5275198Z [36;1mexport TMP_LOOP_DEV=$(sudo losetup --find --show "/mnt/tmp-pv.img")[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5276628Z [36;1msudo pvcreate -f "${TMP_LOOP_DEV}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5277546Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5278262Z [36;1m# create volume group from these pvs[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5279462Z [36;1msudo vgcreate "${VG_NAME}" "${TMP_LOOP_DEV}" "${ROOT_LOOP_DEV}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5280638Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5281309Z [36;1mecho "Recreating swap"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5282169Z [36;1m# create and activate swap[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5283154Z [36;1msudo lvcreate -L "8192M" -n swap "${VG_NAME}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5284267Z [36;1msudo mkswap "/dev/mapper/${VG_NAME}-swap"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5285340Z [36;1msudo swapon "/dev/mapper/${VG_NAME}-swap"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5286485Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5287208Z [36;1mecho "Creating build volume"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5288130Z [36;1m# create and mount build volume[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5289205Z [36;1msudo lvcreate -l 100%FREE -n buildlv "${VG_NAME}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5290280Z [36;1mif [[ false == 'true' ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5291351Z [36;1m  sudo mkfs.ext4 -m0 "/dev/mapper/${VG_NAME}-buildlv"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5292397Z [36;1melse[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5293360Z [36;1m  sudo mkfs.ext4 -Enodiscard -m0 "/dev/mapper/${VG_NAME}-buildlv"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5294537Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5295688Z [36;1msudo mount "/dev/mapper/${VG_NAME}-buildlv" "${BUILD_MOUNT_PATH}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5297214Z [36;1msudo chown -R "runner:runner" "${BUILD_MOUNT_PATH}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5298252Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5299399Z [36;1m# if build mount path is a parent of $GITHUB_WORKSPACE, and has been deleted, recreate it[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5300893Z [36;1mif [[ ! -d "${GITHUB_WORKSPACE}" ]]; then[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5301929Z [36;1m  sudo mkdir -p "${GITHUB_WORKSPACE}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5303119Z [36;1m  sudo chown -R "${WORKSPACE_OWNER}" "${GITHUB_WORKSPACE}"[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5304208Z [36;1mfi[0m
+build	UNKNOWN STEP	2026-04-25T19:04:44.5366035Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+build	UNKNOWN STEP	2026-04-25T19:04:44.5367231Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:04:44.5453777Z Arguments:
+build	UNKNOWN STEP	2026-04-25T19:04:44.5454375Z 
+build	UNKNOWN STEP	2026-04-25T19:04:44.5454831Z   Root reserve:      8192 MiB
+build	UNKNOWN STEP	2026-04-25T19:04:44.5455770Z   Temp reserve:      100 MiB
+build	UNKNOWN STEP	2026-04-25T19:04:44.5456815Z   Swap space:        8192 MiB
+build	UNKNOWN STEP	2026-04-25T19:04:44.5457720Z   Overprovision LVM: false
+build	UNKNOWN STEP	2026-04-25T19:04:44.5459400Z   Mount path:        /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:04:44.5461180Z   Root PV loop path: /pv.img
+build	UNKNOWN STEP	2026-04-25T19:04:44.5462035Z   Temp PV loop path: /mnt/tmp-pv.img
+build	UNKNOWN STEP	2026-04-25T19:04:44.5462977Z   Removing:     dotnet android haskell 
+build	UNKNOWN STEP	2026-04-25T19:04:44.5633461Z Removing unwanted software... 
+build	UNKNOWN STEP	2026-04-25T19:05:41.5635911Z ... done
+build	UNKNOWN STEP	2026-04-25T19:05:41.5636919Z Unmounting and removing swap file.
+build	UNKNOWN STEP	2026-04-25T19:05:41.5871819Z Creating LVM Volume.
+build	UNKNOWN STEP	2026-04-25T19:05:41.5872352Z   Creating LVM PV on root fs.
+build	UNKNOWN STEP	2026-04-25T19:05:41.8162539Z   Physical volume "/dev/loop3" successfully created.
+build	UNKNOWN STEP	2026-04-25T19:05:41.8350034Z   Creating LVM PV on temp fs.
+build	UNKNOWN STEP	2026-04-25T19:05:42.9282763Z   Physical volume "/dev/loop4" successfully created.
+build	UNKNOWN STEP	2026-04-25T19:05:42.9683037Z   Volume group "buildvg" successfully created
+build	UNKNOWN STEP	2026-04-25T19:05:42.9797775Z Recreating swap
+build	UNKNOWN STEP	2026-04-25T19:05:43.0602706Z   Logical volume "swap" created.
+build	UNKNOWN STEP	2026-04-25T19:05:43.0842308Z Setting up swapspace version 1, size = 8 GiB (8589930496 bytes)
+build	UNKNOWN STEP	2026-04-25T19:05:43.0842832Z no label, UUID=ac1dcdf7-03bf-4cc8-a4da-adec75b94a17
+build	UNKNOWN STEP	2026-04-25T19:05:43.0949059Z Creating build volume
+build	UNKNOWN STEP	2026-04-25T19:05:43.1670665Z   Logical volume "buildlv" created.
+build	UNKNOWN STEP	2026-04-25T19:05:43.1880414Z mke2fs 1.46.5 (30-Dec-2021)
+build	UNKNOWN STEP	2026-04-25T19:05:43.1892570Z Creating filesystem with 25137152 4k blocks and 6291456 inodes
+build	UNKNOWN STEP	2026-04-25T19:05:43.1893301Z Filesystem UUID: 97a400dd-426a-4143-b04f-9a5e2b527bb0
+build	UNKNOWN STEP	2026-04-25T19:05:43.1893812Z Superblock backups stored on blocks: 
+build	UNKNOWN STEP	2026-04-25T19:05:43.1894379Z 	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+build	UNKNOWN STEP	2026-04-25T19:05:43.1894961Z 	4096000, 7962624, 11239424, 20480000, 23887872
+build	UNKNOWN STEP	2026-04-25T19:05:43.1895268Z 
+build	UNKNOWN STEP	2026-04-25T19:05:43.1899476Z Allocating group tables:   0/768       done                            
+build	UNKNOWN STEP	2026-04-25T19:05:43.1900928Z Writing inode tables:   0/768       done                            
+build	UNKNOWN STEP	2026-04-25T19:05:43.1938784Z Creating journal (131072 blocks): done
+build	UNKNOWN STEP	2026-04-25T19:05:43.2089637Z Writing superblocks and filesystem accounting information:   0/768       done
+build	UNKNOWN STEP	2026-04-25T19:05:43.2090202Z 
+build	UNKNOWN STEP	2026-04-25T19:05:43.2362858Z ##[group]Run echo "Memory and swap:"
+build	UNKNOWN STEP	2026-04-25T19:05:43.2363188Z [36;1mecho "Memory and swap:"[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2363443Z [36;1msudo free -h[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2363676Z [36;1mecho[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2363893Z [36;1msudo swapon --show[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2364111Z [36;1mecho[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2364344Z [36;1m[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2364526Z [36;1mecho "Available storage:"[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2364771Z [36;1msudo df -h[0m
+build	UNKNOWN STEP	2026-04-25T19:05:43.2429773Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+build	UNKNOWN STEP	2026-04-25T19:05:43.2430104Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:43.2582356Z Memory and swap:
+build	UNKNOWN STEP	2026-04-25T19:05:43.2659897Z                total        used        free      shared  buff/cache   available
+build	UNKNOWN STEP	2026-04-25T19:05:43.2660789Z Mem:            15Gi       529Mi        12Gi        44Mi       2.7Gi        14Gi
+build	UNKNOWN STEP	2026-04-25T19:05:43.2661233Z Swap:          8.0Gi          0B       8.0Gi
+build	UNKNOWN STEP	2026-04-25T19:05:43.2670986Z 
+build	UNKNOWN STEP	2026-04-25T19:05:43.2743523Z NAME      TYPE      SIZE USED PRIO
+build	UNKNOWN STEP	2026-04-25T19:05:43.2743895Z /dev/dm-0 partition   8G   0B   -2
+build	UNKNOWN STEP	2026-04-25T19:05:43.2754093Z 
+build	UNKNOWN STEP	2026-04-25T19:05:43.2754438Z Available storage:
+build	UNKNOWN STEP	2026-04-25T19:05:43.2826470Z Filesystem                   Size  Used Avail Use% Mounted on
+build	UNKNOWN STEP	2026-04-25T19:05:43.2827152Z /dev/root                    146G  146G  100M 100% /
+build	UNKNOWN STEP	2026-04-25T19:05:43.2827491Z tmpfs                        7.9G  172K  7.9G   1% /dev/shm
+build	UNKNOWN STEP	2026-04-25T19:05:43.2827802Z tmpfs                        3.2G  1.1M  3.2G   1% /run
+build	UNKNOWN STEP	2026-04-25T19:05:43.2828235Z tmpfs                        5.0M     0  5.0M   0% /run/lock
+build	UNKNOWN STEP	2026-04-25T19:05:43.2828771Z efivarfs                     128M   34K  128M   1% /sys/firmware/efi/efivars
+build	UNKNOWN STEP	2026-04-25T19:05:43.2829262Z /dev/sda15                   105M  6.1M   99M   6% /boot/efi
+build	UNKNOWN STEP	2026-04-25T19:05:43.2829598Z tmpfs                        1.6G   12K  1.6G   1% /run/user/1001
+build	UNKNOWN STEP	2026-04-25T19:05:43.2830293Z /dev/mapper/buildvg-buildlv   94G   24K   94G   1% /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:05:43.2960376Z ##[group]Run actions/checkout@v4
+build	UNKNOWN STEP	2026-04-25T19:05:43.2960655Z with:
+build	UNKNOWN STEP	2026-04-25T19:05:43.2960949Z   repository: ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:05:43.2961462Z   token: ***
+build	UNKNOWN STEP	2026-04-25T19:05:43.2961659Z   ssh-strict: true
+build	UNKNOWN STEP	2026-04-25T19:05:43.2961853Z   ssh-user: git
+build	UNKNOWN STEP	2026-04-25T19:05:43.2962053Z   persist-credentials: true
+build	UNKNOWN STEP	2026-04-25T19:05:43.2962270Z   clean: true
+build	UNKNOWN STEP	2026-04-25T19:05:43.2962474Z   sparse-checkout-cone-mode: true
+build	UNKNOWN STEP	2026-04-25T19:05:43.2962706Z   fetch-depth: 1
+build	UNKNOWN STEP	2026-04-25T19:05:43.2962898Z   fetch-tags: false
+build	UNKNOWN STEP	2026-04-25T19:05:43.2963092Z   show-progress: true
+build	UNKNOWN STEP	2026-04-25T19:05:43.2963292Z   lfs: false
+build	UNKNOWN STEP	2026-04-25T19:05:43.2963479Z   submodules: false
+build	UNKNOWN STEP	2026-04-25T19:05:43.2963683Z   set-safe-directory: true
+build	UNKNOWN STEP	2026-04-25T19:05:43.2963905Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:43.4002922Z Syncing repository: ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:05:43.4004290Z ##[group]Getting Git version info
+build	UNKNOWN STEP	2026-04-25T19:05:43.4004962Z Working directory is '/home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus'
+build	UNKNOWN STEP	2026-04-25T19:05:43.4005735Z [command]/usr/bin/git version
+build	UNKNOWN STEP	2026-04-25T19:05:43.4079569Z git version 2.53.0
+build	UNKNOWN STEP	2026-04-25T19:05:43.4104364Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:43.4119990Z Temporarily overriding HOME='/home/runner/work/_temp/45e8cf9b-bffc-47cd-a170-a4f56d8dbcc6' before making global git config changes
+build	UNKNOWN STEP	2026-04-25T19:05:43.4121235Z Adding repository directory to the temporary git global config as a safe directory
+build	UNKNOWN STEP	2026-04-25T19:05:43.4134596Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:05:43.4172975Z Deleting the contents of '/home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus'
+build	UNKNOWN STEP	2026-04-25T19:05:43.4189514Z ##[group]Initializing the repository
+build	UNKNOWN STEP	2026-04-25T19:05:43.4193961Z [command]/usr/bin/git init /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:05:43.4289893Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	UNKNOWN STEP	2026-04-25T19:05:43.4290686Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	UNKNOWN STEP	2026-04-25T19:05:43.4291205Z hint: to use in all of your new repositories, which will suppress this warning,
+build	UNKNOWN STEP	2026-04-25T19:05:43.4291589Z hint: call:
+build	UNKNOWN STEP	2026-04-25T19:05:43.4291763Z hint:
+build	UNKNOWN STEP	2026-04-25T19:05:43.4292021Z hint: 	git config --global init.defaultBranch <name>
+build	UNKNOWN STEP	2026-04-25T19:05:43.4292305Z hint:
+build	UNKNOWN STEP	2026-04-25T19:05:43.4292584Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	UNKNOWN STEP	2026-04-25T19:05:43.4293311Z hint: 'development'. The just-created branch can be renamed via this command:
+build	UNKNOWN STEP	2026-04-25T19:05:43.4293744Z hint:
+build	UNKNOWN STEP	2026-04-25T19:05:43.4294003Z hint: 	git branch -m <name>
+build	UNKNOWN STEP	2026-04-25T19:05:43.4294322Z hint:
+build	UNKNOWN STEP	2026-04-25T19:05:43.4294761Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	UNKNOWN STEP	2026-04-25T19:05:43.4295513Z Initialized empty Git repository in /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/.git/
+build	UNKNOWN STEP	2026-04-25T19:05:43.4307188Z [command]/usr/bin/git remote add origin https://github.com/ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:05:43.4344166Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:43.4344756Z ##[group]Disabling automatic garbage collection
+build	UNKNOWN STEP	2026-04-25T19:05:43.4350074Z [command]/usr/bin/git config --local gc.auto 0
+build	UNKNOWN STEP	2026-04-25T19:05:43.4379107Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:43.4379634Z ##[group]Setting up auth
+build	UNKNOWN STEP	2026-04-25T19:05:43.4386712Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	UNKNOWN STEP	2026-04-25T19:05:43.4417570Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	UNKNOWN STEP	2026-04-25T19:05:43.4774348Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	UNKNOWN STEP	2026-04-25T19:05:43.4803808Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	UNKNOWN STEP	2026-04-25T19:05:43.5040997Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	UNKNOWN STEP	2026-04-25T19:05:43.5072386Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	UNKNOWN STEP	2026-04-25T19:05:43.5324547Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	UNKNOWN STEP	2026-04-25T19:05:43.5363264Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:43.5363822Z ##[group]Fetching the repository
+build	UNKNOWN STEP	2026-04-25T19:05:43.5371785Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fccc9a81551c06330768b08115cb30cb27c6c97d:refs/remotes/origin/main
+build	UNKNOWN STEP	2026-04-25T19:05:44.3521053Z ##[warning]You are running out of disk space. The runner will stop working when the machine runs out of disk space. Free space left: 99 MB
+build	UNKNOWN STEP	2026-04-25T19:05:51.8837119Z From https://github.com/ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:05:51.8837988Z  * [new ref]             fccc9a81551c06330768b08115cb30cb27c6c97d -> origin/main
+build	UNKNOWN STEP	2026-04-25T19:05:51.8869335Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:51.8869873Z ##[group]Determining the checkout info
+build	UNKNOWN STEP	2026-04-25T19:05:51.8871782Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:51.8877260Z [command]/usr/bin/git sparse-checkout disable
+build	UNKNOWN STEP	2026-04-25T19:05:51.8919412Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	UNKNOWN STEP	2026-04-25T19:05:51.8945427Z ##[group]Checking out the ref
+build	UNKNOWN STEP	2026-04-25T19:05:51.8949352Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	UNKNOWN STEP	2026-04-25T19:05:52.9739213Z Updating files:  24% (16807/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.0227311Z Updating files:  25% (17091/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.0623131Z Updating files:  26% (17775/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.0967316Z Updating files:  27% (18459/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.1394484Z Updating files:  28% (19142/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.1787960Z Updating files:  29% (19826/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.2287294Z Updating files:  30% (20509/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.2813791Z Updating files:  31% (21193/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.3604671Z Updating files:  32% (21877/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.4185406Z Updating files:  33% (22560/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.4698469Z Updating files:  34% (23244/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.5300743Z Updating files:  35% (23928/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.5813995Z Updating files:  36% (24611/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.6154995Z Updating files:  37% (25295/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.7589002Z Updating files:  38% (25978/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.9397456Z Updating files:  39% (26662/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.9539518Z Updating files:  40% (27346/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:53.9980332Z Updating files:  40% (27447/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.0355781Z Updating files:  41% (28029/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.1038535Z Updating files:  42% (28713/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.1670230Z Updating files:  43% (29397/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.2272816Z Updating files:  44% (30080/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.2995596Z Updating files:  45% (30764/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.3629161Z Updating files:  46% (31447/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.4300595Z Updating files:  47% (32131/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.4935241Z Updating files:  48% (32815/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.5496896Z Updating files:  49% (33498/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.6263722Z Updating files:  50% (34182/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.6779390Z Updating files:  51% (34866/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.7441350Z Updating files:  52% (35549/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.8293242Z Updating files:  53% (36233/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.8987315Z Updating files:  54% (36917/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.9539819Z Updating files:  55% (37600/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:54.9981777Z Updating files:  55% (37956/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.0910957Z Updating files:  56% (38284/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.1729554Z Updating files:  57% (38967/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.2816762Z Updating files:  58% (39651/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.3573613Z Updating files:  59% (40335/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.4287518Z Updating files:  60% (41018/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.4905019Z Updating files:  61% (41702/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.5622213Z Updating files:  62% (42386/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.6186962Z Updating files:  63% (43069/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.7213894Z Updating files:  64% (43753/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.8558965Z Updating files:  65% (44436/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.9130202Z Updating files:  66% (45120/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.9540147Z Updating files:  67% (45804/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:55.9778210Z Updating files:  67% (46280/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.0175798Z Updating files:  68% (46487/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.0799262Z Updating files:  69% (47171/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.1366902Z Updating files:  70% (47855/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.2111251Z Updating files:  71% (48538/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.2812274Z Updating files:  72% (49222/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.3586985Z Updating files:  73% (49905/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.4143355Z Updating files:  74% (50589/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.5344751Z Updating files:  75% (51273/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.6085676Z Updating files:  76% (51956/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.6775972Z Updating files:  77% (52640/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.7127981Z Updating files:  78% (53324/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.7720333Z Updating files:  79% (54007/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.8248912Z Updating files:  80% (54691/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.8639501Z Updating files:  81% (55375/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.9080815Z Updating files:  82% (56058/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.9504051Z Updating files:  83% (56742/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.9538514Z Updating files:  84% (57425/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:56.9913983Z Updating files:  84% (57489/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.0592972Z Updating files:  85% (58109/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.0980360Z Updating files:  86% (58793/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.1402615Z Updating files:  87% (59476/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.1691377Z Updating files:  88% (60160/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.2251674Z Updating files:  89% (60844/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.2923627Z Updating files:  90% (61527/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.3525920Z Updating files:  91% (62211/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.4063327Z Updating files:  92% (62894/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.4594686Z Updating files:  93% (63578/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.5274946Z Updating files:  94% (64262/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.6012276Z Updating files:  95% (64945/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.6857883Z Updating files:  96% (65629/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.7317890Z Updating files:  97% (66313/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.7764959Z Updating files:  98% (66996/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.8123658Z Updating files:  99% (67680/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.8124104Z Updating files: 100% (68363/68363)
+build	UNKNOWN STEP	2026-04-25T19:05:57.8124502Z Updating files: 100% (68363/68363), done.
+build	UNKNOWN STEP	2026-04-25T19:05:57.8839385Z Switched to a new branch 'main'
+build	UNKNOWN STEP	2026-04-25T19:05:57.8840640Z branch 'main' set up to track 'origin/main'.
+build	UNKNOWN STEP	2026-04-25T19:05:57.8975848Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:57.9018260Z [command]/usr/bin/git log -1 --format=%H
+build	UNKNOWN STEP	2026-04-25T19:05:57.9042282Z fccc9a81551c06330768b08115cb30cb27c6c97d
+build	UNKNOWN STEP	2026-04-25T19:05:57.9142307Z ##[group]Run sudo apt-get update
+build	UNKNOWN STEP	2026-04-25T19:05:57.9142607Z [36;1msudo apt-get update[0m
+build	UNKNOWN STEP	2026-04-25T19:05:57.9143923Z [36;1msudo apt-get install -y bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev python-is-python3 python3 wget locales[0m
+build	UNKNOWN STEP	2026-04-25T19:05:57.9145227Z [36;1mmkdir -p ~/bin[0m
+build	UNKNOWN STEP	2026-04-25T19:05:57.9145607Z [36;1mcurl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo[0m
+build	UNKNOWN STEP	2026-04-25T19:05:57.9146007Z [36;1mchmod a+x ~/bin/repo[0m
+build	UNKNOWN STEP	2026-04-25T19:05:57.9146643Z [36;1mecho "$HOME/bin" >> $GITHUB_PATH[0m
+build	UNKNOWN STEP	2026-04-25T19:05:57.9206583Z shell: /usr/bin/bash -e {0}
+build	UNKNOWN STEP	2026-04-25T19:05:57.9206826Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:05:58.0344788Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	UNKNOWN STEP	2026-04-25T19:05:58.0745942Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+build	UNKNOWN STEP	2026-04-25T19:05:58.0769976Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.0841569Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.0867738Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.1021304Z Hit:6 https://packages.microsoft.com/repos/azure-cli jammy InRelease
+build	UNKNOWN STEP	2026-04-25T19:05:58.1217743Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+build	UNKNOWN STEP	2026-04-25T19:05:58.2527050Z Get:8 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
+build	UNKNOWN STEP	2026-04-25T19:05:58.2738439Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3439 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.2987781Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [519 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3024362Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [19.6 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3033845Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [5759 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3358518Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [1098 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3404814Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1268 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3494753Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [315 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3525849Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [30.5 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3547963Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [59.4 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.3556959Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [13.5 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.4263126Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [70.1 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.4280134Z Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.4 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.4289381Z Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.8 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.4300926Z Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.9 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.4887621Z Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3174 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5073826Z Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [448 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5127566Z Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [14.2 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5168015Z Get:26 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [5594 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5501504Z Get:27 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1070 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5590593Z Get:28 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1029 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5689452Z Get:29 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [226 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5737725Z Get:30 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.9 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5790712Z Get:31 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [52.3 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.5796429Z Get:32 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [10.5 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.6850464Z Get:33 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [336 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.6941975Z Get:34 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [21.9 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.6969549Z Get:35 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [155 kB]
+build	UNKNOWN STEP	2026-04-25T19:05:58.8743995Z Get:36 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1213 B]
+build	UNKNOWN STEP	2026-04-25T19:06:05.4073854Z Fetched 25.2 MB in 3s (7959 kB/s)
+build	UNKNOWN STEP	2026-04-25T19:06:06.4565092Z Reading package lists...
+build	UNKNOWN STEP	2026-04-25T19:06:06.5199995Z Reading package lists...
+build	UNKNOWN STEP	2026-04-25T19:06:06.8058886Z Building dependency tree...
+build	UNKNOWN STEP	2026-04-25T19:06:06.8070691Z Reading state information...
+build	UNKNOWN STEP	2026-04-25T19:06:06.9941007Z bc is already the newest version (1.07.1-3build1).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9941587Z bc set to manually installed.
+build	UNKNOWN STEP	2026-04-25T19:06:06.9942045Z bison is already the newest version (2:3.8.2+dfsg-1build1).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9942700Z build-essential is already the newest version (12.9ubuntu3).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9943285Z build-essential set to manually installed.
+build	UNKNOWN STEP	2026-04-25T19:06:06.9943775Z flex is already the newest version (2.6.4-8build2).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9944359Z python-is-python3 is already the newest version (3.9.2-2).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9945063Z squashfs-tools is already the newest version (1:4.5-3build1).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9945734Z squashfs-tools set to manually installed.
+build	UNKNOWN STEP	2026-04-25T19:06:06.9946468Z zip is already the newest version (3.0-12build2).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9946999Z curl is already the newest version (7.81.0-1ubuntu1.23).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9947548Z gnupg is already the newest version (2.2.27-3ubuntu2.5).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9948192Z libssl-dev is already the newest version (3.0.2-0ubuntu1.23).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9948854Z libxml2 is already the newest version (2.9.13+dfsg-1ubuntu0.11).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9949368Z libxml2 set to manually installed.
+build	UNKNOWN STEP	2026-04-25T19:06:06.9949833Z locales is already the newest version (2.35-0ubuntu3.13).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9950371Z python3 is already the newest version (3.10.6-1~22.04.1).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9950895Z rsync is already the newest version (3.2.7-0ubuntu0.22.04.4).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9951446Z wget is already the newest version (1.21.2-2ubuntu1.1).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9952024Z zlib1g-dev is already the newest version (1:1.2.11.dfsg-2ubuntu9.2).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9952803Z imagemagick is already the newest version (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9953510Z git is already the newest version (1:2.53.0-0ppa1~ubuntu22.04.1).
+build	UNKNOWN STEP	2026-04-25T19:06:06.9954175Z The following additional packages will be installed:
+build	UNKNOWN STEP	2026-04-25T19:06:06.9954922Z   g++-11-multilib gcc-11-multilib lib32asan6 lib32atomic1 lib32gcc-11-dev
+build	UNKNOWN STEP	2026-04-25T19:06:06.9956187Z   lib32gomp1 lib32itm1 lib32ncurses6 lib32ncursesw6 lib32quadmath0
+build	UNKNOWN STEP	2026-04-25T19:06:06.9957057Z   lib32readline8 lib32stdc++-11-dev lib32tinfo6 lib32ubsan1 libasound2-dev
+build	UNKNOWN STEP	2026-04-25T19:06:06.9957709Z   libasyncns0 libc6-dev-i386 libc6-dev-x32 libc6-x32 libcaca-dev libcaca0
+build	UNKNOWN STEP	2026-04-25T19:06:06.9958343Z   libflac8 libgl-dev libglu1-mesa libglu1-mesa-dev libglx-dev libhiredis0.14
+build	UNKNOWN STEP	2026-04-25T19:06:06.9958799Z   libopengl0 libopus0 libpulse-dev libpulse-mainloop-glib0 libpulse0
+build	UNKNOWN STEP	2026-04-25T19:06:06.9959226Z   libsdl1.2debian libslang2-dev libsndfile1 libtinfo5 libvorbisenc2
+build	UNKNOWN STEP	2026-04-25T19:06:06.9959829Z   libx32asan6 libx32atomic1 libx32gcc-11-dev libx32gcc-s1 libx32gomp1
+build	UNKNOWN STEP	2026-04-25T19:06:06.9960284Z   libx32itm1 libx32quadmath0 libx32stdc++-11-dev libx32stdc++6 libx32ubsan1
+build	UNKNOWN STEP	2026-04-25T19:06:06.9960648Z Suggested packages:
+build	UNKNOWN STEP	2026-04-25T19:06:06.9960931Z   distcc | icecc lib32stdc++6-11-dbg libx32stdc++6-11-dbg ncurses-doc
+build	UNKNOWN STEP	2026-04-25T19:06:06.9961454Z   libasound2-doc opus-tools pulseaudio
+build	UNKNOWN STEP	2026-04-25T19:06:07.0422339Z The following NEW packages will be installed:
+build	UNKNOWN STEP	2026-04-25T19:06:07.0423033Z   ccache g++-11-multilib g++-multilib gcc-11-multilib gcc-multilib gperf
+build	UNKNOWN STEP	2026-04-25T19:06:07.0423715Z   lib32asan6 lib32atomic1 lib32gcc-11-dev lib32gomp1 lib32itm1
+build	UNKNOWN STEP	2026-04-25T19:06:07.0424329Z   lib32ncurses-dev lib32ncurses6 lib32ncursesw6 lib32quadmath0
+build	UNKNOWN STEP	2026-04-25T19:06:07.0425060Z   lib32readline-dev lib32readline8 lib32stdc++-11-dev lib32tinfo6 lib32ubsan1
+build	UNKNOWN STEP	2026-04-25T19:06:07.0425792Z   lib32z1-dev libasound2-dev libasyncns0 libc6-dev-i386 libc6-dev-x32
+build	UNKNOWN STEP	2026-04-25T19:06:07.0426687Z   libc6-x32 libcaca-dev libcaca0 libflac8 libgl-dev libglu1-mesa
+build	UNKNOWN STEP	2026-04-25T19:06:07.0427441Z   libglu1-mesa-dev libglx-dev libhiredis0.14 liblz4-tool libncurses5
+build	UNKNOWN STEP	2026-04-25T19:06:07.0428279Z   libncurses5-dev libopengl0 libopus0 libpulse-dev libpulse-mainloop-glib0
+build	UNKNOWN STEP	2026-04-25T19:06:07.0429042Z   libpulse0 libsdl1.2-dev libsdl1.2debian libslang2-dev libsndfile1 libtinfo5
+build	UNKNOWN STEP	2026-04-25T19:06:07.0429782Z   libvorbisenc2 libx32asan6 libx32atomic1 libx32gcc-11-dev libx32gcc-s1
+build	UNKNOWN STEP	2026-04-25T19:06:07.0430543Z   libx32gomp1 libx32itm1 libx32quadmath0 libx32stdc++-11-dev libx32stdc++6
+build	UNKNOWN STEP	2026-04-25T19:06:07.0431229Z   libx32ubsan1 libxml2-utils lzop pngcrush schedtool xsltproc
+build	UNKNOWN STEP	2026-04-25T19:06:07.0617990Z 0 upgraded, 63 newly installed, 0 to remove and 38 not upgraded.
+build	UNKNOWN STEP	2026-04-25T19:06:07.0618555Z Need to get 26.2 MB of archives.
+build	UNKNOWN STEP	2026-04-25T19:06:07.0619062Z After this operation, 114 MB of additional disk space will be used.
+build	UNKNOWN STEP	2026-04-25T19:06:07.0619687Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	UNKNOWN STEP	2026-04-25T19:06:07.1308851Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libhiredis0.14 amd64 0.14.1-2 [32.8 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.1801290Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 ccache amd64 4.5.1-1 [495 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.2330380Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev-i386 amd64 2.35-0ubuntu3.13 [1445 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.3186503Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-x32 amd64 2.35-0ubuntu3.13 [2978 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.4202641Z Get:6 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev-x32 amd64 2.35-0ubuntu3.13 [1632 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.5312555Z Get:7 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32gcc-s1 amd64 12.3.0-1ubuntu1~22.04.3 [54.0 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.7672024Z Get:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32gomp1 amd64 12.3.0-1ubuntu1~22.04.3 [133 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.8159283Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32gomp1 amd64 12.3.0-1ubuntu1~22.04.3 [127 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.8670705Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32itm1 amd64 12.3.0-1ubuntu1~22.04.3 [32.0 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.9150823Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32itm1 amd64 12.3.0-1ubuntu1~22.04.3 [30.2 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:07.9627158Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32atomic1 amd64 12.3.0-1ubuntu1~22.04.3 [8516 B]
+build	UNKNOWN STEP	2026-04-25T19:06:08.0105916Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32atomic1 amd64 12.3.0-1ubuntu1~22.04.3 [10.2 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:08.0587247Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32asan6 amd64 11.4.0-1ubuntu1~22.04.3 [2154 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:08.1258230Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32asan6 amd64 11.4.0-1ubuntu1~22.04.3 [2129 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:08.1903708Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ubsan1 amd64 12.3.0-1ubuntu1~22.04.3 [959 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:08.2479792Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32stdc++6 amd64 12.3.0-1ubuntu1~22.04.3 [682 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:08.5746446Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32ubsan1 amd64 12.3.0-1ubuntu1~22.04.3 [963 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.0194131Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32quadmath0 amd64 12.3.0-1ubuntu1~22.04.3 [244 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.0699732Z Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32quadmath0 amd64 12.3.0-1ubuntu1~22.04.3 [156 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.1191792Z Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32gcc-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2339 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.1849598Z Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32gcc-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2107 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.2493279Z Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-multilib amd64 11.4.0-1ubuntu1~22.04.3 [880 B]
+build	UNKNOWN STEP	2026-04-25T19:06:09.2973077Z Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32stdc++-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [989 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.3550180Z Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32stdc++-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [906 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.4126914Z Get:26 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11-multilib amd64 11.4.0-1ubuntu1~22.04.3 [894 B]
+build	UNKNOWN STEP	2026-04-25T19:06:09.4603823Z Get:27 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 gcc-multilib amd64 4:11.2.0-1ubuntu1 [1382 B]
+build	UNKNOWN STEP	2026-04-25T19:06:09.5078866Z Get:28 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 g++-multilib amd64 4:11.2.0-1ubuntu1 [854 B]
+build	UNKNOWN STEP	2026-04-25T19:06:09.5563786Z Get:29 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 gperf amd64 3.1-1build1 [103 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.6066596Z Get:30 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32tinfo6 amd64 6.3-2ubuntu0.1 [103 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.6599192Z Get:31 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ncurses6 amd64 6.3-2ubuntu0.1 [118 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.7094053Z Get:32 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ncursesw6 amd64 6.3-2ubuntu0.1 [157 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.7612580Z Get:33 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ncurses-dev amd64 6.3-2ubuntu0.1 [350 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.8161713Z Get:34 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 lib32readline8 amd64 8.1.2-1 [154 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.8680265Z Get:35 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 lib32readline-dev amd64 8.1.2-1 [161 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.9177500Z Get:36 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32z1-dev amd64 1:1.2.11.dfsg-2ubuntu9.2 [62.1 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:09.9658347Z Get:37 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasound2-dev amd64 1.2.6.1-1ubuntu1.1 [110 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.0149580Z Get:38 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libasyncns0 amd64 0.8-6build2 [12.8 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.0624292Z Get:39 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcaca0 amd64 0.99.beta19-2.2ubuntu4.1 [224 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.1153664Z Get:40 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libslang2-dev amd64 2.3.2-5build4 [437 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.1703321Z Get:41 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcaca-dev amd64 0.99.beta19-2.2ubuntu4.1 [772 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.2277159Z Get:42 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libflac8 amd64 1.3.3-2ubuntu0.2 [111 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.2763532Z Get:43 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libglx-dev amd64 1.4.0-1 [14.1 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.3243254Z Get:44 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libgl-dev amd64 1.4.0-1 [101 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.3729476Z Get:45 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libopengl0 amd64 1.4.0-1 [36.5 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.4201532Z Get:46 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libglu1-mesa amd64 9.0.2-1 [145 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.4682252Z Get:47 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libglu1-mesa-dev amd64 9.0.2-1 [231 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.5177522Z Get:48 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libtinfo5 amd64 6.3-2ubuntu0.1 [100 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.5669789Z Get:49 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libncurses5 amd64 6.3-2ubuntu0.1 [107 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.6151674Z Get:50 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libncurses5-dev amd64 6.3-2ubuntu0.1 [790 B]
+build	UNKNOWN STEP	2026-04-25T19:06:10.6621087Z Get:51 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libopus0 amd64 1.3.1-0.1build2 [203 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.7115775Z Get:52 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libvorbisenc2 amd64 1.3.7-1build2 [82.6 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.7598000Z Get:53 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsndfile1 amd64 1.0.31-2ubuntu0.2 [196 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.8100124Z Get:54 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpulse0 amd64 1:15.99.1+dfsg1-1ubuntu2.2 [298 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.8651762Z Get:55 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpulse-mainloop-glib0 amd64 1:15.99.1+dfsg1-1ubuntu2.2 [12.4 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.9131018Z Get:56 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpulse-dev amd64 1:15.99.1+dfsg1-1ubuntu2.2 [75.6 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:10.9615850Z Get:57 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libsdl1.2debian amd64 1.2.15+dfsg2-6 [177 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:11.0104505Z Get:58 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libsdl1.2-dev amd64 1.2.15+dfsg2-6 [708 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:11.0673073Z Get:59 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxml2-utils amd64 2.9.13+dfsg-1ubuntu0.11 [40.2 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:11.1198159Z Get:60 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 lzop amd64 1.04-2build2 [83.7 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:11.1694214Z Get:61 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 pngcrush amd64 1.8.13-0.1 [52.8 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:11.2171747Z Get:62 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 xsltproc amd64 1.1.34-4ubuntu0.22.04.5 [14.7 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:11.2645918Z Get:63 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 liblz4-tool all 1.9.3-2build2 [2342 B]
+build	UNKNOWN STEP	2026-04-25T19:06:11.3125841Z Get:64 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 schedtool amd64 1.3.0-4 [22.0 kB]
+build	UNKNOWN STEP	2026-04-25T19:06:11.7570393Z Fetched 26.2 MB in 4s (6144 kB/s)
+build	UNKNOWN STEP	2026-04-25T19:06:11.7822841Z Selecting previously unselected package libhiredis0.14:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:11.8163944Z (Reading database ... 
+build	UNKNOWN STEP	2026-04-25T19:06:11.8164399Z (Reading database ... 5%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8164737Z (Reading database ... 10%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8165050Z (Reading database ... 15%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8165275Z (Reading database ... 20%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8165468Z (Reading database ... 25%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8165662Z (Reading database ... 30%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8165859Z (Reading database ... 35%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8166830Z (Reading database ... 40%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8167144Z (Reading database ... 45%
+build	UNKNOWN STEP	2026-04-25T19:06:11.8167371Z (Reading database ... 50%
+build	UNKNOWN STEP	2026-04-25T19:06:11.9250780Z (Reading database ... 55%
+build	UNKNOWN STEP	2026-04-25T19:06:12.0037966Z (Reading database ... 60%
+build	UNKNOWN STEP	2026-04-25T19:06:12.0439017Z (Reading database ... 65%
+build	UNKNOWN STEP	2026-04-25T19:06:12.2265609Z (Reading database ... 70%
+build	UNKNOWN STEP	2026-04-25T19:06:12.4387213Z (Reading database ... 75%
+build	UNKNOWN STEP	2026-04-25T19:06:12.6227349Z (Reading database ... 80%
+build	UNKNOWN STEP	2026-04-25T19:06:12.8269600Z (Reading database ... 85%
+build	UNKNOWN STEP	2026-04-25T19:06:13.0667094Z (Reading database ... 90%
+build	UNKNOWN STEP	2026-04-25T19:06:13.2888324Z (Reading database ... 95%
+build	UNKNOWN STEP	2026-04-25T19:06:13.2888650Z (Reading database ... 100%
+build	UNKNOWN STEP	2026-04-25T19:06:13.2888996Z (Reading database ... 286901 files and directories currently installed.)
+build	UNKNOWN STEP	2026-04-25T19:06:13.2963226Z Preparing to unpack .../00-libhiredis0.14_0.14.1-2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.2997775Z Unpacking libhiredis0.14:amd64 (0.14.1-2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.3265788Z Selecting previously unselected package ccache.
+build	UNKNOWN STEP	2026-04-25T19:06:13.3607876Z Preparing to unpack .../01-ccache_4.5.1-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.3630630Z Unpacking ccache (4.5.1-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.3948077Z Selecting previously unselected package libc6-dev-i386.
+build	UNKNOWN STEP	2026-04-25T19:06:13.4149836Z Preparing to unpack .../02-libc6-dev-i386_2.35-0ubuntu3.13_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.4157872Z Unpacking libc6-dev-i386 (2.35-0ubuntu3.13) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.4946774Z Selecting previously unselected package libc6-x32.
+build	UNKNOWN STEP	2026-04-25T19:06:13.5158890Z Preparing to unpack .../03-libc6-x32_2.35-0ubuntu3.13_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.5166964Z Unpacking libc6-x32 (2.35-0ubuntu3.13) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.6227661Z Selecting previously unselected package libc6-dev-x32.
+build	UNKNOWN STEP	2026-04-25T19:06:13.6439998Z Preparing to unpack .../04-libc6-dev-x32_2.35-0ubuntu3.13_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.6446763Z Unpacking libc6-dev-x32 (2.35-0ubuntu3.13) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.6998419Z Selecting previously unselected package libx32gcc-s1.
+build	UNKNOWN STEP	2026-04-25T19:06:13.7209911Z Preparing to unpack .../05-libx32gcc-s1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.7217165Z Unpacking libx32gcc-s1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.7444097Z Selecting previously unselected package lib32gomp1.
+build	UNKNOWN STEP	2026-04-25T19:06:13.7644937Z Preparing to unpack .../06-lib32gomp1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.7652074Z Unpacking lib32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.7878709Z Selecting previously unselected package libx32gomp1.
+build	UNKNOWN STEP	2026-04-25T19:06:13.8078627Z Preparing to unpack .../07-libx32gomp1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.8086832Z Unpacking libx32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.8318333Z Selecting previously unselected package lib32itm1.
+build	UNKNOWN STEP	2026-04-25T19:06:13.8517639Z Preparing to unpack .../08-lib32itm1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.8525338Z Unpacking lib32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.8740035Z Selecting previously unselected package libx32itm1.
+build	UNKNOWN STEP	2026-04-25T19:06:13.8941856Z Preparing to unpack .../09-libx32itm1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.8949924Z Unpacking libx32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.9165788Z Selecting previously unselected package lib32atomic1.
+build	UNKNOWN STEP	2026-04-25T19:06:13.9361466Z Preparing to unpack .../10-lib32atomic1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.9369144Z Unpacking lib32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.9580117Z Selecting previously unselected package libx32atomic1.
+build	UNKNOWN STEP	2026-04-25T19:06:13.9778119Z Preparing to unpack .../11-libx32atomic1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.9785498Z Unpacking libx32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:13.9994271Z Selecting previously unselected package lib32asan6.
+build	UNKNOWN STEP	2026-04-25T19:06:14.0190905Z Preparing to unpack .../12-lib32asan6_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.0199152Z Unpacking lib32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.0687349Z Selecting previously unselected package libx32asan6.
+build	UNKNOWN STEP	2026-04-25T19:06:14.0891562Z Preparing to unpack .../13-libx32asan6_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.0899183Z Unpacking libx32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.1389132Z Selecting previously unselected package lib32ubsan1.
+build	UNKNOWN STEP	2026-04-25T19:06:14.1590796Z Preparing to unpack .../14-lib32ubsan1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.1598375Z Unpacking lib32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.1931295Z Selecting previously unselected package libx32stdc++6.
+build	UNKNOWN STEP	2026-04-25T19:06:14.2133479Z Preparing to unpack .../15-libx32stdc++6_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.2140539Z Unpacking libx32stdc++6 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.2435809Z Selecting previously unselected package libx32ubsan1.
+build	UNKNOWN STEP	2026-04-25T19:06:14.2636643Z Preparing to unpack .../16-libx32ubsan1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.2644686Z Unpacking libx32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.2969408Z Selecting previously unselected package lib32quadmath0.
+build	UNKNOWN STEP	2026-04-25T19:06:14.3173078Z Preparing to unpack .../17-lib32quadmath0_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.3183786Z Unpacking lib32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.3431251Z Selecting previously unselected package libx32quadmath0.
+build	UNKNOWN STEP	2026-04-25T19:06:14.3631021Z Preparing to unpack .../18-libx32quadmath0_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.3638221Z Unpacking libx32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.3855052Z Selecting previously unselected package lib32gcc-11-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:14.4055260Z Preparing to unpack .../19-lib32gcc-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.4062661Z Unpacking lib32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.4571633Z Selecting previously unselected package libx32gcc-11-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:14.4773997Z Preparing to unpack .../20-libx32gcc-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.4781128Z Unpacking libx32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.5245686Z Selecting previously unselected package gcc-11-multilib.
+build	UNKNOWN STEP	2026-04-25T19:06:14.5448205Z Preparing to unpack .../21-gcc-11-multilib_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.5454702Z Unpacking gcc-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.5652187Z Selecting previously unselected package lib32stdc++-11-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:14.5850738Z Preparing to unpack .../22-lib32stdc++-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.5858913Z Unpacking lib32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.6540927Z Selecting previously unselected package libx32stdc++-11-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:14.6743626Z Preparing to unpack .../23-libx32stdc++-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.6751288Z Unpacking libx32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.7311978Z Selecting previously unselected package g++-11-multilib.
+build	UNKNOWN STEP	2026-04-25T19:06:14.7514970Z Preparing to unpack .../24-g++-11-multilib_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.7523026Z Unpacking g++-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.7721567Z Selecting previously unselected package gcc-multilib.
+build	UNKNOWN STEP	2026-04-25T19:06:14.7923812Z Preparing to unpack .../25-gcc-multilib_4%3a11.2.0-1ubuntu1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.7931439Z Unpacking gcc-multilib (4:11.2.0-1ubuntu1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.8128786Z Selecting previously unselected package g++-multilib.
+build	UNKNOWN STEP	2026-04-25T19:06:14.8327560Z Preparing to unpack .../26-g++-multilib_4%3a11.2.0-1ubuntu1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.8334227Z Unpacking g++-multilib (4:11.2.0-1ubuntu1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.8538190Z Selecting previously unselected package gperf.
+build	UNKNOWN STEP	2026-04-25T19:06:14.8738235Z Preparing to unpack .../27-gperf_3.1-1build1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.8747083Z Unpacking gperf (3.1-1build1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.9043770Z Selecting previously unselected package lib32tinfo6.
+build	UNKNOWN STEP	2026-04-25T19:06:14.9250003Z Preparing to unpack .../28-lib32tinfo6_6.3-2ubuntu0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.9257893Z Unpacking lib32tinfo6 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.9492291Z Selecting previously unselected package lib32ncurses6.
+build	UNKNOWN STEP	2026-04-25T19:06:14.9691725Z Preparing to unpack .../29-lib32ncurses6_6.3-2ubuntu0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.9700091Z Unpacking lib32ncurses6 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:14.9940341Z Selecting previously unselected package lib32ncursesw6.
+build	UNKNOWN STEP	2026-04-25T19:06:15.0143628Z Preparing to unpack .../30-lib32ncursesw6_6.3-2ubuntu0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.0151001Z Unpacking lib32ncursesw6 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.0389358Z Selecting previously unselected package lib32ncurses-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:15.0591408Z Preparing to unpack .../31-lib32ncurses-dev_6.3-2ubuntu0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.0598901Z Unpacking lib32ncurses-dev (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.0908074Z Selecting previously unselected package lib32readline8.
+build	UNKNOWN STEP	2026-04-25T19:06:15.1108264Z Preparing to unpack .../32-lib32readline8_8.1.2-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.1115088Z Unpacking lib32readline8 (8.1.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.1351756Z Selecting previously unselected package lib32readline-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:15.1552415Z Preparing to unpack .../33-lib32readline-dev_8.1.2-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.1560647Z Unpacking lib32readline-dev (8.1.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.1800204Z Selecting previously unselected package lib32z1-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:15.2002878Z Preparing to unpack .../34-lib32z1-dev_1%3a1.2.11.dfsg-2ubuntu9.2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.2011537Z Unpacking lib32z1-dev (1:1.2.11.dfsg-2ubuntu9.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.2231365Z Selecting previously unselected package libasound2-dev:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.2430914Z Preparing to unpack .../35-libasound2-dev_1.2.6.1-1ubuntu1.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.2466124Z Unpacking libasound2-dev:amd64 (1.2.6.1-1ubuntu1.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.2834406Z Selecting previously unselected package libasyncns0:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.3034620Z Preparing to unpack .../36-libasyncns0_0.8-6build2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.3043107Z Unpacking libasyncns0:amd64 (0.8-6build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.3260830Z Selecting previously unselected package libcaca0:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.3460885Z Preparing to unpack .../37-libcaca0_0.99.beta19-2.2ubuntu4.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.3468579Z Unpacking libcaca0:amd64 (0.99.beta19-2.2ubuntu4.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.3735784Z Selecting previously unselected package libslang2-dev:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.3937516Z Preparing to unpack .../38-libslang2-dev_2.3.2-5build4_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.3945115Z Unpacking libslang2-dev:amd64 (2.3.2-5build4) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.4260395Z Selecting previously unselected package libcaca-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:15.4461908Z Preparing to unpack .../39-libcaca-dev_0.99.beta19-2.2ubuntu4.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.4470776Z Unpacking libcaca-dev (0.99.beta19-2.2ubuntu4.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.5586823Z Selecting previously unselected package libflac8:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.5791300Z Preparing to unpack .../40-libflac8_1.3.3-2ubuntu0.2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.5798698Z Unpacking libflac8:amd64 (1.3.3-2ubuntu0.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.6022355Z Selecting previously unselected package libglx-dev:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.6223705Z Preparing to unpack .../41-libglx-dev_1.4.0-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.6232625Z Unpacking libglx-dev:amd64 (1.4.0-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.6469320Z Selecting previously unselected package libgl-dev:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.6668441Z Preparing to unpack .../42-libgl-dev_1.4.0-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.6676611Z Unpacking libgl-dev:amd64 (1.4.0-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.6959291Z Selecting previously unselected package libopengl0:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.7161651Z Preparing to unpack .../43-libopengl0_1.4.0-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.7169830Z Unpacking libopengl0:amd64 (1.4.0-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.7408059Z Selecting previously unselected package libglu1-mesa:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.7608345Z Preparing to unpack .../44-libglu1-mesa_9.0.2-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.7618735Z Unpacking libglu1-mesa:amd64 (9.0.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.7854691Z Selecting previously unselected package libglu1-mesa-dev:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.8053314Z Preparing to unpack .../45-libglu1-mesa-dev_9.0.2-1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.8061467Z Unpacking libglu1-mesa-dev:amd64 (9.0.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.8324952Z Selecting previously unselected package libtinfo5:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.8528141Z Preparing to unpack .../46-libtinfo5_6.3-2ubuntu0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.8541327Z Unpacking libtinfo5:amd64 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.8798965Z Selecting previously unselected package libncurses5:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.9003111Z Preparing to unpack .../47-libncurses5_6.3-2ubuntu0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.9013760Z Unpacking libncurses5:amd64 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.9241532Z Selecting previously unselected package libncurses5-dev:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.9440051Z Preparing to unpack .../48-libncurses5-dev_6.3-2ubuntu0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.9453329Z Unpacking libncurses5-dev:amd64 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.9673453Z Selecting previously unselected package libopus0:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:15.9877796Z Preparing to unpack .../49-libopus0_1.3.1-0.1build2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:15.9889849Z Unpacking libopus0:amd64 (1.3.1-0.1build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.0138581Z Selecting previously unselected package libvorbisenc2:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:16.0340426Z Preparing to unpack .../50-libvorbisenc2_1.3.7-1build2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.0348938Z Unpacking libvorbisenc2:amd64 (1.3.7-1build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.0597004Z Selecting previously unselected package libsndfile1:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:16.0798370Z Preparing to unpack .../51-libsndfile1_1.0.31-2ubuntu0.2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.0806723Z Unpacking libsndfile1:amd64 (1.0.31-2ubuntu0.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.1082493Z Selecting previously unselected package libpulse0:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:16.1281884Z Preparing to unpack .../52-libpulse0_1%3a15.99.1+dfsg1-1ubuntu2.2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.1360701Z Unpacking libpulse0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.1639398Z Selecting previously unselected package libpulse-mainloop-glib0:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:16.1842546Z Preparing to unpack .../53-libpulse-mainloop-glib0_1%3a15.99.1+dfsg1-1ubuntu2.2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.1849879Z Unpacking libpulse-mainloop-glib0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.2068728Z Selecting previously unselected package libpulse-dev:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:16.2268335Z Preparing to unpack .../54-libpulse-dev_1%3a15.99.1+dfsg1-1ubuntu2.2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.2276756Z Unpacking libpulse-dev:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.2599704Z Selecting previously unselected package libsdl1.2debian:amd64.
+build	UNKNOWN STEP	2026-04-25T19:06:16.2800967Z Preparing to unpack .../55-libsdl1.2debian_1.2.15+dfsg2-6_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.2809592Z Unpacking libsdl1.2debian:amd64 (1.2.15+dfsg2-6) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.3148227Z Selecting previously unselected package libsdl1.2-dev.
+build	UNKNOWN STEP	2026-04-25T19:06:16.3351061Z Preparing to unpack .../56-libsdl1.2-dev_1.2.15+dfsg2-6_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.3359797Z Unpacking libsdl1.2-dev (1.2.15+dfsg2-6) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.4500657Z Selecting previously unselected package libxml2-utils.
+build	UNKNOWN STEP	2026-04-25T19:06:16.4704911Z Preparing to unpack .../57-libxml2-utils_2.9.13+dfsg-1ubuntu0.11_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.4712842Z Unpacking libxml2-utils (2.9.13+dfsg-1ubuntu0.11) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.5004084Z Selecting previously unselected package lzop.
+build	UNKNOWN STEP	2026-04-25T19:06:16.5205897Z Preparing to unpack .../58-lzop_1.04-2build2_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.5214251Z Unpacking lzop (1.04-2build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.5454741Z Selecting previously unselected package pngcrush.
+build	UNKNOWN STEP	2026-04-25T19:06:16.5655146Z Preparing to unpack .../59-pngcrush_1.8.13-0.1_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.5662677Z Unpacking pngcrush (1.8.13-0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.5919471Z Selecting previously unselected package xsltproc.
+build	UNKNOWN STEP	2026-04-25T19:06:16.6122351Z Preparing to unpack .../60-xsltproc_1.1.34-4ubuntu0.22.04.5_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.6132416Z Unpacking xsltproc (1.1.34-4ubuntu0.22.04.5) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.6355714Z Selecting previously unselected package liblz4-tool.
+build	UNKNOWN STEP	2026-04-25T19:06:16.6570044Z Preparing to unpack .../61-liblz4-tool_1.9.3-2build2_all.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.6578180Z Unpacking liblz4-tool (1.9.3-2build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.6791480Z Selecting previously unselected package schedtool.
+build	UNKNOWN STEP	2026-04-25T19:06:16.7007073Z Preparing to unpack .../62-schedtool_1.3.0-4_amd64.deb ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7015005Z Unpacking schedtool (1.3.0-4) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7577769Z Setting up libslang2-dev:amd64 (2.3.2-5build4) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7600954Z Setting up libc6-dev-i386 (2.35-0ubuntu3.13) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7621055Z Setting up lib32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7640940Z Setting up libcaca0:amd64 (0.99.beta19-2.2ubuntu4.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7660115Z Setting up pngcrush (1.8.13-0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7679669Z Setting up xsltproc (1.1.34-4ubuntu0.22.04.5) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7695548Z Setting up lib32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7712991Z Setting up gperf (3.1-1build1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7730557Z Setting up libopengl0:amd64 (1.4.0-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7747790Z Setting up libflac8:amd64 (1.3.3-2ubuntu0.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7764411Z Setting up libc6-x32 (2.35-0ubuntu3.13) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7791325Z Setting up libc6-dev-x32 (2.35-0ubuntu3.13) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7810022Z Setting up lib32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7830817Z Setting up libopus0:amd64 (1.3.1-0.1build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7850254Z Setting up lib32z1-dev (1:1.2.11.dfsg-2ubuntu9.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7868161Z Setting up libx32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7887899Z Setting up lib32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7908162Z Setting up liblz4-tool (1.9.3-2build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7926858Z Setting up libasyncns0:amd64 (0.8-6build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7945605Z Setting up lib32tinfo6 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7965455Z Setting up lzop (1.04-2build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.7983167Z Setting up libncurses5-dev:amd64 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8000833Z Setting up lib32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8018228Z Setting up libglx-dev:amd64 (1.4.0-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8037905Z Setting up libx32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8058271Z Setting up libglu1-mesa:amd64 (9.0.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8076516Z Setting up libxml2-utils (2.9.13+dfsg-1ubuntu0.11) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8093166Z Setting up libasound2-dev:amd64 (1.2.6.1-1ubuntu1.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8110732Z Setting up libcaca-dev (0.99.beta19-2.2ubuntu4.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8127865Z Setting up libtinfo5:amd64 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8144729Z Setting up lib32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8161827Z Setting up libgl-dev:amd64 (1.4.0-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8178320Z Setting up libvorbisenc2:amd64 (1.3.7-1build2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8196812Z Setting up schedtool (1.3.0-4) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8214500Z Setting up libhiredis0.14:amd64 (0.14.1-2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8231337Z Setting up libx32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8248208Z Setting up libx32gcc-s1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8265393Z Setting up lib32readline8 (8.1.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8282419Z Setting up ccache (4.5.1-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8307386Z Updating symlinks in /usr/lib/ccache ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8413797Z Setting up lib32ncurses6 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8431230Z Setting up libx32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8450167Z Setting up lib32ncursesw6 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8467018Z Setting up libncurses5:amd64 (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8484065Z Setting up libx32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8503247Z Setting up libglu1-mesa-dev:amd64 (9.0.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8521417Z Setting up libsndfile1:amd64 (1.0.31-2ubuntu0.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8539497Z Setting up libx32stdc++6 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8557264Z Setting up lib32ncurses-dev (6.3-2ubuntu0.1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8574412Z Setting up libx32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8593706Z Setting up libpulse0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8671163Z Setting up libx32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8688393Z Setting up libpulse-mainloop-glib0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8721837Z Setting up libsdl1.2debian:amd64 (1.2.15+dfsg2-6) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8739180Z Setting up libx32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8756538Z Setting up libpulse-dev:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8773029Z Setting up lib32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8798748Z Setting up lib32readline-dev (8.1.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8829635Z Setting up lib32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8847806Z Setting up libsdl1.2-dev (1.2.15+dfsg2-6) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8866530Z Setting up gcc-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8883053Z Setting up gcc-multilib (4:11.2.0-1ubuntu1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8901260Z Setting up g++-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8937697Z Setting up g++-multilib (4:11.2.0-1ubuntu1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:16.8960826Z Processing triggers for install-info (6.8-4build1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:17.0031335Z Processing triggers for libc-bin (2.35-0ubuntu3.13) ...
+build	UNKNOWN STEP	2026-04-25T19:06:17.0407845Z Processing triggers for man-db (2.10.2-1) ...
+build	UNKNOWN STEP	2026-04-25T19:06:17.0429077Z Not building database; man-db/auto-update is not 'true'.
+build	UNKNOWN STEP	2026-04-25T19:06:17.5951179Z 
+build	UNKNOWN STEP	2026-04-25T19:06:17.5951913Z Running kernel seems to be up-to-date.
+build	UNKNOWN STEP	2026-04-25T19:06:17.5952269Z 
+build	UNKNOWN STEP	2026-04-25T19:06:17.5952432Z No services need to be restarted.
+build	UNKNOWN STEP	2026-04-25T19:06:17.5952688Z 
+build	UNKNOWN STEP	2026-04-25T19:06:17.5952818Z No containers need to be restarted.
+build	UNKNOWN STEP	2026-04-25T19:06:17.5954319Z 
+build	UNKNOWN STEP	2026-04-25T19:06:17.5954633Z No user sessions are running outdated binaries.
+build	UNKNOWN STEP	2026-04-25T19:06:17.5954976Z 
+build	UNKNOWN STEP	2026-04-25T19:06:17.5955272Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+build	UNKNOWN STEP	2026-04-25T19:06:19.2319237Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+build	UNKNOWN STEP	2026-04-25T19:06:19.2319956Z                                  Dload  Upload   Total   Spent    Left  Speed
+build	UNKNOWN STEP	2026-04-25T19:06:19.2320343Z 
+build	UNKNOWN STEP	2026-04-25T19:06:19.4384935Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+build	UNKNOWN STEP	2026-04-25T19:06:19.4385624Z 100 44950  100 44950    0     0   212k      0 --:--:-- --:--:-- --:--:--  213k
+build	UNKNOWN STEP	2026-04-25T19:06:19.4459920Z ##[group]Run git config --global user.name "GitHub Actions"
+build	UNKNOWN STEP	2026-04-25T19:06:19.4460353Z [36;1mgit config --global user.name "GitHub Actions"[0m
+build	UNKNOWN STEP	2026-04-25T19:06:19.4460699Z [36;1mgit config --global user.email "actions@github.com"[0m
+build	UNKNOWN STEP	2026-04-25T19:06:19.4522455Z shell: /usr/bin/bash -e {0}
+build	UNKNOWN STEP	2026-04-25T19:06:19.4522707Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:06:19.4657947Z ##[group]Run ./build.sh
+build	UNKNOWN STEP	2026-04-25T19:06:19.4658187Z [36;1m./build.sh[0m
+build	UNKNOWN STEP	2026-04-25T19:06:19.4712840Z shell: /usr/bin/bash -e {0}
+build	UNKNOWN STEP	2026-04-25T19:06:19.4713094Z ##[endgroup]
+build	UNKNOWN STEP	2026-04-25T19:06:19.4801999Z ======================================
+build	UNKNOWN STEP	2026-04-25T19:06:19.4802428Z  Ubuntu Touch (d2s) Halium Builder 
+build	UNKNOWN STEP	2026-04-25T19:06:19.4802804Z ======================================
+build	UNKNOWN STEP	2026-04-25T19:06:19.4817191Z >>> Initializing Halium 11 Repository...
+build	UNKNOWN STEP	2026-04-25T19:06:22.2930884Z 
+build	UNKNOWN STEP	2026-04-25T19:06:22.2931991Z repo has been initialized in /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/workspace
+build	UNKNOWN STEP	2026-04-25T19:06:22.3153401Z >>> Setting up local manifests...
+build	UNKNOWN STEP	2026-04-25T19:06:22.3184614Z >>> Syncing sources (This will take a while)...
+build	UNKNOWN STEP	2026-04-25T19:16:59.2341384Z 
+build	UNKNOWN STEP	2026-04-25T19:16:59.2419875Z device/qcom/sepolicy: Shared project LineageOS/android_device_qcom_sepolicy found, disabling pruning.
+build	UNKNOWN STEP	2026-04-25T19:16:59.2429751Z 
+build	UNKNOWN STEP	2026-04-25T19:16:59.2466514Z hardware/qcom/audio: Shared project LineageOS/android_hardware_qcom_audio found, disabling pruning.
+build	UNKNOWN STEP	2026-04-25T19:16:59.2466989Z 
+build	UNKNOWN STEP	2026-04-25T19:16:59.2470724Z hardware/qcom/display: Shared project LineageOS/android_hardware_qcom_display found, disabling pruning.
+build	UNKNOWN STEP	2026-04-25T19:16:59.2471140Z 
+build	UNKNOWN STEP	2026-04-25T19:16:59.2471526Z hardware/qcom/media: Shared project LineageOS/android_hardware_qcom_media found, disabling pruning.
+build	UNKNOWN STEP	2026-04-25T19:16:59.2472055Z 
+build	UNKNOWN STEP	2026-04-25T19:16:59.2474154Z vendor/nxp/opensource/pn5xx/halimpl: Shared project LineageOS/android_vendor_nxp_opensource_halimpl found, disabling pruning.
+build	UNKNOWN STEP	2026-04-25T19:16:59.2474683Z 
+build	UNKNOWN STEP	2026-04-25T19:16:59.2475280Z vendor/nxp/opensource/pn5xx/hidlimpl: Shared project LineageOS/android_vendor_nxp_opensource_hidlimpl found, disabling pruning.
+build	UNKNOWN STEP	2026-04-25T19:16:59.2475838Z repo sync has finished successfully.
+build	UNKNOWN STEP	2026-04-25T19:16:59.3347135Z >>> Applying our patched device tree & kernel...
+build	UNKNOWN STEP	2026-04-25T19:17:10.1956077Z >>> Building halium-boot and systemimage...
+build	UNKNOWN STEP	2026-04-25T19:17:25.2055336Z In file included from build/make/core/config.mk:291:
+build	UNKNOWN STEP	2026-04-25T19:17:25.2058464Z In file included from build/make/core/envsetup.mk:266:
+build	UNKNOWN STEP	2026-04-25T19:17:25.2167243Z [1mbuild/make/core/product_config.mk:155: [31merror: [0m[1mCan not locate config makefile for product "halium_d2s".[0m
+build	UNKNOWN STEP	2026-04-25T19:17:25.2198961Z 19:17:25 dumpvars failed with: exit status 1
+build	UNKNOWN STEP	2026-04-25T19:17:27.3847513Z repo sync has finished successfully.
+build	UNKNOWN STEP	2026-04-25T19:17:29.0420993Z repo sync has finished successfully.
+build	UNKNOWN STEP	2026-04-25T19:17:29.0769748Z Device d2s not found. Attempting to retrieve device repository from LineageOS Github (http://github.com/LineageOS).
+build	UNKNOWN STEP	2026-04-25T19:17:29.0770605Z Found repository: android_device_samsung_d2s
+build	UNKNOWN STEP	2026-04-25T19:17:29.0771023Z Default revision: lineage-18.1
+build	UNKNOWN STEP	2026-04-25T19:17:29.0771348Z Checking branch info
+build	UNKNOWN STEP	2026-04-25T19:17:29.0771803Z Checking if device/samsung/d2s is fetched from android_device_samsung_d2s
+build	UNKNOWN STEP	2026-04-25T19:17:29.0772533Z LineageOS/android_device_samsung_d2s already fetched to device/samsung/d2s
+build	UNKNOWN STEP	2026-04-25T19:17:29.0773072Z Syncing repository to retrieve project.
+build	UNKNOWN STEP	2026-04-25T19:17:29.0789357Z Repository synced!
+build	UNKNOWN STEP	2026-04-25T19:17:29.0789670Z Looking for dependencies in device/samsung/d2s
+build	UNKNOWN STEP	2026-04-25T19:17:29.0790046Z Looking for dependencies in device/samsung/exynos9820-common
+build	UNKNOWN STEP	2026-04-25T19:17:29.0790371Z Adding dependencies to manifest
+build	UNKNOWN STEP	2026-04-25T19:17:29.0790788Z Checking if device/samsung_slsi/sepolicy is fetched from android_device_samsung_slsi_sepolicy
+build	UNKNOWN STEP	2026-04-25T19:17:29.0791407Z Adding dependency: LineageOS/android_device_samsung_slsi_sepolicy -> device/samsung_slsi/sepolicy
+build	UNKNOWN STEP	2026-04-25T19:17:29.0791912Z Using default branch for android_device_samsung_slsi_sepolicy
+build	UNKNOWN STEP	2026-04-25T19:17:29.0792330Z Checking if hardware/samsung/nfc is fetched from android_hardware_samsung_nfc
+build	UNKNOWN STEP	2026-04-25T19:17:29.0792819Z Adding dependency: LineageOS/android_hardware_samsung_nfc -> hardware/samsung/nfc
+build	UNKNOWN STEP	2026-04-25T19:17:29.0793240Z Using default branch for android_hardware_samsung_nfc
+build	UNKNOWN STEP	2026-04-25T19:17:29.0797404Z Syncing dependencies
+build	UNKNOWN STEP	2026-04-25T19:17:29.0797742Z Looking for dependencies in device/samsung_slsi/sepolicy
+build	UNKNOWN STEP	2026-04-25T19:17:29.0798117Z device/samsung_slsi/sepolicy has no additional dependencies.
+build	UNKNOWN STEP	2026-04-25T19:17:29.0798456Z Looking for dependencies in hardware/samsung
+build	UNKNOWN STEP	2026-04-25T19:17:29.0798745Z hardware/samsung has no additional dependencies.
+build	UNKNOWN STEP	2026-04-25T19:17:29.0799044Z Looking for dependencies in hardware/samsung/nfc
+build	UNKNOWN STEP	2026-04-25T19:17:29.0799559Z hardware/samsung/nfc has no additional dependencies.
+build	UNKNOWN STEP	2026-04-25T19:17:29.0799881Z Looking for dependencies in kernel/samsung/exynos9820
+build	UNKNOWN STEP	2026-04-25T19:17:29.0800224Z kernel/samsung/exynos9820 has no additional dependencies.
+build	UNKNOWN STEP	2026-04-25T19:17:29.0800508Z Done
+build	UNKNOWN STEP	2026-04-25T19:17:29.6877163Z In file included from build/make/core/config.mk:291:
+build	UNKNOWN STEP	2026-04-25T19:17:29.6877735Z In file included from build/make/core/envsetup.mk:266:
+build	UNKNOWN STEP	2026-04-25T19:17:29.6880441Z [1mbuild/make/core/product_config.mk:155: [31merror: [0m[1mCan not locate config makefile for product "halium_d2s".[0m
+build	UNKNOWN STEP	2026-04-25T19:17:29.6891799Z 19:17:29 dumpvars failed with: exit status 1
+build	UNKNOWN STEP	2026-04-25T19:17:30.0481501Z ##[error]Process completed with exit code 1.
+build	UNKNOWN STEP	2026-04-25T19:17:30.2099964Z Post job cleanup.
+build	UNKNOWN STEP	2026-04-25T19:17:30.4222530Z [command]/usr/bin/git version
+build	UNKNOWN STEP	2026-04-25T19:17:30.4264544Z git version 2.53.0
+build	UNKNOWN STEP	2026-04-25T19:17:30.4313929Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/789dea8f-ea3a-4c71-bca5-6a9b29caf3f3/.gitconfig'
+build	UNKNOWN STEP	2026-04-25T19:17:30.4321941Z Temporarily overriding HOME='/home/runner/work/_temp/789dea8f-ea3a-4c71-bca5-6a9b29caf3f3' before making global git config changes
+build	UNKNOWN STEP	2026-04-25T19:17:30.4324067Z Adding repository directory to the temporary git global config as a safe directory
+build	UNKNOWN STEP	2026-04-25T19:17:30.4337041Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	UNKNOWN STEP	2026-04-25T19:17:30.4371681Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	UNKNOWN STEP	2026-04-25T19:17:30.4406928Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	UNKNOWN STEP	2026-04-25T19:17:30.4928700Z fatal: No url found for submodule path 'tools/halium-scripts' in .gitmodules
+build	UNKNOWN STEP	2026-04-25T19:17:30.4991574Z ##[warning]The process '/usr/bin/git' failed with exit code 128
+build	UNKNOWN STEP	2026-04-25T19:17:30.5254209Z Cleaning up orphan processes
+build	UNKNOWN STEP	2026-04-25T19:17:30.6471932Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

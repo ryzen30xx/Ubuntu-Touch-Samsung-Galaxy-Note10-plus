@@ -1,0 +1,961 @@
+build	Set up job	﻿2026-04-26T13:27:58.8455569Z Current runner version: '2.333.1'
+build	Set up job	2026-04-26T13:27:58.8482516Z ##[group]Runner Image Provisioner
+build	Set up job	2026-04-26T13:27:58.8483280Z Hosted Compute Agent
+build	Set up job	2026-04-26T13:27:58.8483980Z Version: 20260213.493
+build	Set up job	2026-04-26T13:27:58.8484547Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+build	Set up job	2026-04-26T13:27:58.8485268Z Build Date: 2026-02-13T00:28:41Z
+build	Set up job	2026-04-26T13:27:58.8485953Z Worker ID: {5d3f40ec-af4e-415e-9b9f-0cf7b7927a45}
+build	Set up job	2026-04-26T13:27:58.8486622Z Azure Region: eastus
+build	Set up job	2026-04-26T13:27:58.8487229Z ##[endgroup]
+build	Set up job	2026-04-26T13:27:58.8488541Z ##[group]Operating System
+build	Set up job	2026-04-26T13:27:58.8489156Z Ubuntu
+build	Set up job	2026-04-26T13:27:58.8489571Z 22.04.5
+build	Set up job	2026-04-26T13:27:58.8490150Z LTS
+build	Set up job	2026-04-26T13:27:58.8490604Z ##[endgroup]
+build	Set up job	2026-04-26T13:27:58.8491097Z ##[group]Runner Image
+build	Set up job	2026-04-26T13:27:58.8491720Z Image: ubuntu-22.04
+build	Set up job	2026-04-26T13:27:58.8492479Z Version: 20260413.88.1
+build	Set up job	2026-04-26T13:27:58.8493530Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260413.88/images/ubuntu/Ubuntu2204-Readme.md
+build	Set up job	2026-04-26T13:27:58.8495220Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260413.88
+build	Set up job	2026-04-26T13:27:58.8496209Z ##[endgroup]
+build	Set up job	2026-04-26T13:27:58.8497300Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-04-26T13:27:58.8499192Z Contents: read
+build	Set up job	2026-04-26T13:27:58.8499766Z Metadata: read
+build	Set up job	2026-04-26T13:27:58.8500268Z Packages: read
+build	Set up job	2026-04-26T13:27:58.8500830Z ##[endgroup]
+build	Set up job	2026-04-26T13:27:58.8503162Z Secret source: Actions
+build	Set up job	2026-04-26T13:27:58.8503903Z Prepare workflow directory
+build	Set up job	2026-04-26T13:27:58.8826694Z Prepare all required actions
+build	Set up job	2026-04-26T13:27:58.8863957Z Getting action download info
+build	Set up job	2026-04-26T13:27:59.2027943Z Download action repository 'easimon/maximize-build-space@master' (SHA:c28619d8999a147d5e09c1199f84ff6af6ad5794)
+build	Set up job	2026-04-26T13:27:59.4990372Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build	Set up job	2026-04-26T13:27:59.5500310Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	Set up job	2026-04-26T13:27:59.7979935Z Complete job name: build
+build	Maximize Build Space	﻿2026-04-26T13:27:59.8722087Z ##[group]Run easimon/maximize-build-space@master
+build	Maximize Build Space	2026-04-26T13:27:59.8723177Z with:
+build	Maximize Build Space	2026-04-26T13:27:59.8723554Z   root-reserve-mb: 8192
+build	Maximize Build Space	2026-04-26T13:27:59.8723971Z   swap-size-mb: 8192
+build	Maximize Build Space	2026-04-26T13:27:59.8724377Z   remove-dotnet: true
+build	Maximize Build Space	2026-04-26T13:27:59.8724766Z   remove-android: true
+build	Maximize Build Space	2026-04-26T13:27:59.8725170Z   remove-haskell: true
+build	Maximize Build Space	2026-04-26T13:27:59.8725576Z   temp-reserve-mb: 100
+build	Maximize Build Space	2026-04-26T13:27:59.8725990Z   overprovision-lvm: false
+build	Maximize Build Space	2026-04-26T13:27:59.8726449Z   build-mount-path-ownership: runner:runner
+build	Maximize Build Space	2026-04-26T13:27:59.8726968Z   pv-loop-path: /pv.img
+build	Maximize Build Space	2026-04-26T13:27:59.8727402Z   tmp-pv-loop-path: /mnt/tmp-pv.img
+build	Maximize Build Space	2026-04-26T13:27:59.8727867Z   remove-codeql: false
+build	Maximize Build Space	2026-04-26T13:27:59.8728287Z   remove-docker-images: false
+build	Maximize Build Space	2026-04-26T13:27:59.8728860Z ##[endgroup]
+build	Maximize Build Space	2026-04-26T13:27:59.8825761Z ##[group]Run echo "Memory and swap:"
+build	Maximize Build Space	2026-04-26T13:27:59.8826372Z [36;1mecho "Memory and swap:"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8826864Z [36;1msudo free -h[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8827285Z [36;1mecho[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8827701Z [36;1msudo swapon --show[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8828127Z [36;1mecho[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8828474Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8828834Z [36;1mecho "Available storage:"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8829298Z [36;1msudo df -h[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8829684Z [36;1mecho[0m
+build	Maximize Build Space	2026-04-26T13:27:59.8901823Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+build	Maximize Build Space	2026-04-26T13:27:59.8902836Z ##[endgroup]
+build	Maximize Build Space	2026-04-26T13:27:59.9051007Z Memory and swap:
+build	Maximize Build Space	2026-04-26T13:27:59.9118684Z                total        used        free      shared  buff/cache   available
+build	Maximize Build Space	2026-04-26T13:27:59.9119726Z Mem:            15Gi       534Mi        12Gi        38Mi       2.4Gi        14Gi
+build	Maximize Build Space	2026-04-26T13:27:59.9120714Z Swap:          3.0Gi          0B       3.0Gi
+build	Maximize Build Space	2026-04-26T13:27:59.9130062Z 
+build	Maximize Build Space	2026-04-26T13:27:59.9202932Z NAME      TYPE SIZE USED PRIO
+build	Maximize Build Space	2026-04-26T13:27:59.9203759Z /swapfile file   3G   0B   -2
+build	Maximize Build Space	2026-04-26T13:27:59.9213004Z 
+build	Maximize Build Space	2026-04-26T13:27:59.9213695Z Available storage:
+build	Maximize Build Space	2026-04-26T13:27:59.9380130Z Filesystem      Size  Used Avail Use% Mounted on
+build	Maximize Build Space	2026-04-26T13:27:59.9380857Z /dev/root       146G   56G   90G  39% /
+build	Maximize Build Space	2026-04-26T13:27:59.9381369Z tmpfs           7.9G  172K  7.9G   1% /dev/shm
+build	Maximize Build Space	2026-04-26T13:27:59.9382042Z tmpfs           3.2G  1.1M  3.2G   1% /run
+build	Maximize Build Space	2026-04-26T13:27:59.9382860Z tmpfs           5.0M     0  5.0M   0% /run/lock
+build	Maximize Build Space	2026-04-26T13:27:59.9383456Z efivarfs        128M   34K  128M   1% /sys/firmware/efi/efivars
+build	Maximize Build Space	2026-04-26T13:27:59.9384081Z /dev/sda15      105M  6.1M   99M   6% /boot/efi
+build	Maximize Build Space	2026-04-26T13:27:59.9384625Z tmpfs           1.6G   12K  1.6G   1% /run/user/1001
+build	Maximize Build Space	2026-04-26T13:27:59.9390086Z 
+build	Maximize Build Space	2026-04-26T13:27:59.9502608Z ##[group]Run set -euo pipefail
+build	Maximize Build Space	2026-04-26T13:27:59.9503172Z [36;1mset -euo pipefail[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9503589Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9503937Z [36;1mBUILD_MOUNT_PATH=""[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9504709Z [36;1mif [[ -z "${BUILD_MOUNT_PATH}" ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9505547Z [36;1m  BUILD_MOUNT_PATH="${GITHUB_WORKSPACE}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9506114Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9506453Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9506794Z [36;1mecho "Arguments:"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9507202Z [36;1mecho[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9507581Z [36;1mecho "  Root reserve:      8192 MiB"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9508109Z [36;1mecho "  Temp reserve:      100 MiB"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9508610Z [36;1mecho "  Swap space:        8192 MiB"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9509125Z [36;1mecho "  Overprovision LVM: false"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9509690Z [36;1mecho "  Mount path:        ${BUILD_MOUNT_PATH}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9510259Z [36;1mecho "  Root PV loop path: /pv.img"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9510826Z [36;1mecho "  Temp PV loop path: /mnt/tmp-pv.img"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9511369Z [36;1mecho -n "  Removing:     "[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9511853Z [36;1mif [[ true == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9512495Z [36;1m  echo -n "dotnet "[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9512914Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9513286Z [36;1mif [[ true == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9514010Z [36;1m  echo -n "android "[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9514422Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9514772Z [36;1mif [[ true == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9515240Z [36;1m  echo -n "haskell "[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9515647Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9516006Z [36;1mif [[ false == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9516469Z [36;1m  echo -n "codeql "[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9516940Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9517291Z [36;1mif [[ false == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9517756Z [36;1m  echo -n "docker "[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9518161Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9518491Z [36;1mecho[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9518837Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9519332Z [36;1m# store owner of $GITHUB_WORKSPACE in case the action deletes it[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9520115Z [36;1mWORKSPACE_OWNER="$(stat -c '%U:%G' "${GITHUB_WORKSPACE}")"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9520707Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9521114Z [36;1m# ensure mount path exists before the action[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9521681Z [36;1msudo mkdir -p "${BUILD_MOUNT_PATH}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9523057Z [36;1msudo find "${BUILD_MOUNT_PATH}" -maxdepth 0 ! -empty -exec echo 'WARNING: directory [{}] is not empty, data loss might occur. Content:' \; -exec ls -al "{}" \;[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9524150Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9524532Z [36;1mecho "Removing unwanted software... "[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9525046Z [36;1mif [[ true == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9525518Z [36;1m  sudo rm -rf /usr/share/dotnet[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9525978Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9526323Z [36;1mif [[ true == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9526812Z [36;1m  sudo rm -rf /usr/local/lib/android[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9527513Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9527869Z [36;1mif [[ true == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9528335Z [36;1m  sudo rm -rf /opt/ghc[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9528917Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9529281Z [36;1mif [[ false == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9529805Z [36;1m  sudo rm -rf /opt/hostedtoolcache/CodeQL[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9530303Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9530741Z [36;1mif [[ false == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9531246Z [36;1m  sudo docker image prune --all --force[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9531740Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9532076Z [36;1mecho "... done"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9532630Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9532966Z [36;1mVG_NAME=buildvg[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9533349Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9533814Z [36;1m# github runners have an active swap file in /mnt/swapfile[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9534624Z [36;1m# we want to reuse the temp disk, so first unmount swap and clean the temp disk[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9535360Z [36;1mecho "Unmounting and removing swap file."[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9535872Z [36;1msudo swapoff -a[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9536313Z [36;1msudo rm -f /mnt/swapfile[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9536760Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9537135Z [36;1mecho "Creating LVM Volume."[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9537637Z [36;1mecho "  Creating LVM PV on root fs."[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9538157Z [36;1m# create loop pv image on root fs[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9538669Z [36;1mROOT_RESERVE_KB=$(expr 8192 \* 1024)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9539299Z [36;1mROOT_FREE_KB=$(df --block-size=1024 --output=avail / | tail -1)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9540043Z [36;1mROOT_LVM_SIZE_KB=$(expr $ROOT_FREE_KB - $ROOT_RESERVE_KB)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9540728Z [36;1mROOT_LVM_SIZE_BYTES=$(expr $ROOT_LVM_SIZE_KB \* 1024)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9541555Z [36;1msudo touch "/pv.img" && sudo fallocate -z -l "${ROOT_LVM_SIZE_BYTES}" "/pv.img"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9542496Z [36;1mexport ROOT_LOOP_DEV=$(sudo losetup --find --show "/pv.img")[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9543144Z [36;1msudo pvcreate -f "${ROOT_LOOP_DEV}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9543618Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9543959Z [36;1m# create pv on temp disk[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9544449Z [36;1mecho "  Creating LVM PV on temp fs."[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9545126Z [36;1mTMP_RESERVE_KB=$(expr 100 \* 1024)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9545762Z [36;1mTMP_FREE_KB=$(df --block-size=1024 --output=avail /mnt | tail -1)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9546493Z [36;1mTMP_LVM_SIZE_KB=$(expr $TMP_FREE_KB - $TMP_RESERVE_KB)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9547150Z [36;1mTMP_LVM_SIZE_BYTES=$(expr $TMP_LVM_SIZE_KB \* 1024)[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9548000Z [36;1msudo touch "/mnt/tmp-pv.img" && sudo fallocate -z -l "${TMP_LVM_SIZE_BYTES}" "/mnt/tmp-pv.img"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9548930Z [36;1mexport TMP_LOOP_DEV=$(sudo losetup --find --show "/mnt/tmp-pv.img")[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9549612Z [36;1msudo pvcreate -f "${TMP_LOOP_DEV}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9550086Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9550457Z [36;1m# create volume group from these pvs[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9551097Z [36;1msudo vgcreate "${VG_NAME}" "${TMP_LOOP_DEV}" "${ROOT_LOOP_DEV}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9551696Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9552049Z [36;1mecho "Recreating swap"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9552604Z [36;1m# create and activate swap[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9553130Z [36;1msudo lvcreate -L "8192M" -n swap "${VG_NAME}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9553715Z [36;1msudo mkswap "/dev/mapper/${VG_NAME}-swap"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9554275Z [36;1msudo swapon "/dev/mapper/${VG_NAME}-swap"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9554776Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9555123Z [36;1mecho "Creating build volume"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9555600Z [36;1m# create and mount build volume[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9556153Z [36;1msudo lvcreate -l 100%FREE -n buildlv "${VG_NAME}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9556718Z [36;1mif [[ false == 'true' ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9557275Z [36;1m  sudo mkfs.ext4 -m0 "/dev/mapper/${VG_NAME}-buildlv"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9557825Z [36;1melse[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9558330Z [36;1m  sudo mkfs.ext4 -Enodiscard -m0 "/dev/mapper/${VG_NAME}-buildlv"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9558927Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9559558Z [36;1msudo mount "/dev/mapper/${VG_NAME}-buildlv" "${BUILD_MOUNT_PATH}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9560285Z [36;1msudo chown -R "runner:runner" "${BUILD_MOUNT_PATH}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9560835Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9561433Z [36;1m# if build mount path is a parent of $GITHUB_WORKSPACE, and has been deleted, recreate it[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9562369Z [36;1mif [[ ! -d "${GITHUB_WORKSPACE}" ]]; then[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9562919Z [36;1m  sudo mkdir -p "${GITHUB_WORKSPACE}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9563526Z [36;1m  sudo chown -R "${WORKSPACE_OWNER}" "${GITHUB_WORKSPACE}"[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9564085Z [36;1mfi[0m
+build	Maximize Build Space	2026-04-26T13:27:59.9622587Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+build	Maximize Build Space	2026-04-26T13:27:59.9623176Z ##[endgroup]
+build	Maximize Build Space	2026-04-26T13:27:59.9701809Z Arguments:
+build	Maximize Build Space	2026-04-26T13:27:59.9702380Z 
+build	Maximize Build Space	2026-04-26T13:27:59.9702575Z   Root reserve:      8192 MiB
+build	Maximize Build Space	2026-04-26T13:27:59.9703074Z   Temp reserve:      100 MiB
+build	Maximize Build Space	2026-04-26T13:27:59.9703503Z   Swap space:        8192 MiB
+build	Maximize Build Space	2026-04-26T13:27:59.9703966Z   Overprovision LVM: false
+build	Maximize Build Space	2026-04-26T13:27:59.9704846Z   Mount path:        /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Maximize Build Space	2026-04-26T13:27:59.9705769Z   Root PV loop path: /pv.img
+build	Maximize Build Space	2026-04-26T13:27:59.9706208Z   Temp PV loop path: /mnt/tmp-pv.img
+build	Maximize Build Space	2026-04-26T13:27:59.9706687Z   Removing:     dotnet android haskell 
+build	Maximize Build Space	2026-04-26T13:27:59.9874491Z Removing unwanted software... 
+build	Maximize Build Space	2026-04-26T13:28:15.7116463Z ... done
+build	Maximize Build Space	2026-04-26T13:28:15.7117101Z Unmounting and removing swap file.
+build	Maximize Build Space	2026-04-26T13:28:15.7322629Z Creating LVM Volume.
+build	Maximize Build Space	2026-04-26T13:28:15.7323198Z   Creating LVM PV on root fs.
+build	Maximize Build Space	2026-04-26T13:28:16.0527670Z   Physical volume "/dev/loop3" successfully created.
+build	Maximize Build Space	2026-04-26T13:28:16.0713807Z   Creating LVM PV on temp fs.
+build	Maximize Build Space	2026-04-26T13:28:17.1166518Z   Physical volume "/dev/loop4" successfully created.
+build	Maximize Build Space	2026-04-26T13:28:17.1550876Z   Volume group "buildvg" successfully created
+build	Maximize Build Space	2026-04-26T13:28:17.1692815Z Recreating swap
+build	Maximize Build Space	2026-04-26T13:28:17.2447250Z   Logical volume "swap" created.
+build	Maximize Build Space	2026-04-26T13:28:17.2699983Z Setting up swapspace version 1, size = 8 GiB (8589930496 bytes)
+build	Maximize Build Space	2026-04-26T13:28:17.2701218Z no label, UUID=91458020-3902-46b6-b6da-9b89210612bf
+build	Maximize Build Space	2026-04-26T13:28:17.2822642Z Creating build volume
+build	Maximize Build Space	2026-04-26T13:28:17.3526028Z   Logical volume "buildlv" created.
+build	Maximize Build Space	2026-04-26T13:28:17.3763872Z mke2fs 1.46.5 (30-Dec-2021)
+build	Maximize Build Space	2026-04-26T13:28:17.3776130Z Creating filesystem with 25137152 4k blocks and 6291456 inodes
+build	Maximize Build Space	2026-04-26T13:28:17.3776825Z Filesystem UUID: b27ebfcd-4056-4b54-a36b-ad919e707d2d
+build	Maximize Build Space	2026-04-26T13:28:17.3777402Z Superblock backups stored on blocks: 
+build	Maximize Build Space	2026-04-26T13:28:17.3778048Z 	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+build	Maximize Build Space	2026-04-26T13:28:17.3778642Z 	4096000, 7962624, 11239424, 20480000, 23887872
+build	Maximize Build Space	2026-04-26T13:28:17.3779346Z 
+build	Maximize Build Space	2026-04-26T13:28:17.3783982Z Allocating group tables:   0/768       done                            
+build	Maximize Build Space	2026-04-26T13:28:17.3785647Z Writing inode tables:   0/768       done                            
+build	Maximize Build Space	2026-04-26T13:28:17.3837176Z Creating journal (131072 blocks): done
+build	Maximize Build Space	2026-04-26T13:28:17.3978605Z Writing superblocks and filesystem accounting information:   0/768       done
+build	Maximize Build Space	2026-04-26T13:28:17.3979671Z 
+build	Maximize Build Space	2026-04-26T13:28:17.4242023Z ##[group]Run echo "Memory and swap:"
+build	Maximize Build Space	2026-04-26T13:28:17.4243243Z [36;1mecho "Memory and swap:"[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4243495Z [36;1msudo free -h[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4243728Z [36;1mecho[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4243931Z [36;1msudo swapon --show[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4244144Z [36;1mecho[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4244322Z [36;1m[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4244506Z [36;1mecho "Available storage:"[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4244730Z [36;1msudo df -h[0m
+build	Maximize Build Space	2026-04-26T13:28:17.4305828Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+build	Maximize Build Space	2026-04-26T13:28:17.4306176Z ##[endgroup]
+build	Maximize Build Space	2026-04-26T13:28:17.4451689Z Memory and swap:
+build	Maximize Build Space	2026-04-26T13:28:17.4526374Z                total        used        free      shared  buff/cache   available
+build	Maximize Build Space	2026-04-26T13:28:17.4527393Z Mem:            15Gi       536Mi        12Gi        41Mi       2.7Gi        14Gi
+build	Maximize Build Space	2026-04-26T13:28:17.4527870Z Swap:          8.0Gi          0B       8.0Gi
+build	Maximize Build Space	2026-04-26T13:28:17.4537510Z 
+build	Maximize Build Space	2026-04-26T13:28:17.4608132Z NAME      TYPE      SIZE USED PRIO
+build	Maximize Build Space	2026-04-26T13:28:17.4608653Z /dev/dm-0 partition   8G   0B   -2
+build	Maximize Build Space	2026-04-26T13:28:17.4618503Z 
+build	Maximize Build Space	2026-04-26T13:28:17.4618858Z Available storage:
+build	Maximize Build Space	2026-04-26T13:28:17.4688597Z Filesystem                   Size  Used Avail Use% Mounted on
+build	Maximize Build Space	2026-04-26T13:28:17.4689197Z /dev/root                    146G  146G  100M 100% /
+build	Maximize Build Space	2026-04-26T13:28:17.4689684Z tmpfs                        7.9G  172K  7.9G   1% /dev/shm
+build	Maximize Build Space	2026-04-26T13:28:17.4690188Z tmpfs                        3.2G  1.1M  3.2G   1% /run
+build	Maximize Build Space	2026-04-26T13:28:17.4690672Z tmpfs                        5.0M     0  5.0M   0% /run/lock
+build	Maximize Build Space	2026-04-26T13:28:17.4691231Z efivarfs                     128M   34K  128M   1% /sys/firmware/efi/efivars
+build	Maximize Build Space	2026-04-26T13:28:17.4691843Z /dev/sda15                   105M  6.1M   99M   6% /boot/efi
+build	Maximize Build Space	2026-04-26T13:28:17.4692542Z tmpfs                        1.6G   12K  1.6G   1% /run/user/1001
+build	Maximize Build Space	2026-04-26T13:28:17.4693682Z /dev/mapper/buildvg-buildlv   94G   24K   94G   1% /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Checkout Code	﻿2026-04-26T13:28:17.4825192Z ##[group]Run actions/checkout@v4
+build	Checkout Code	2026-04-26T13:28:17.4825500Z with:
+build	Checkout Code	2026-04-26T13:28:17.4825802Z   repository: ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Checkout Code	2026-04-26T13:28:17.4826329Z   token: ***
+build	Checkout Code	2026-04-26T13:28:17.4826521Z   ssh-strict: true
+build	Checkout Code	2026-04-26T13:28:17.4826715Z   ssh-user: git
+build	Checkout Code	2026-04-26T13:28:17.4826920Z   persist-credentials: true
+build	Checkout Code	2026-04-26T13:28:17.4827149Z   clean: true
+build	Checkout Code	2026-04-26T13:28:17.4827343Z   sparse-checkout-cone-mode: true
+build	Checkout Code	2026-04-26T13:28:17.4827586Z   fetch-depth: 1
+build	Checkout Code	2026-04-26T13:28:17.4827769Z   fetch-tags: false
+build	Checkout Code	2026-04-26T13:28:17.4827972Z   show-progress: true
+build	Checkout Code	2026-04-26T13:28:17.4828172Z   lfs: false
+build	Checkout Code	2026-04-26T13:28:17.4828373Z   submodules: false
+build	Checkout Code	2026-04-26T13:28:17.4828576Z   set-safe-directory: true
+build	Checkout Code	2026-04-26T13:28:17.4828789Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:17.5855136Z Syncing repository: ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Checkout Code	2026-04-26T13:28:17.5856611Z ##[group]Getting Git version info
+build	Checkout Code	2026-04-26T13:28:17.5857377Z Working directory is '/home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus'
+build	Checkout Code	2026-04-26T13:28:17.5858283Z [command]/usr/bin/git version
+build	Checkout Code	2026-04-26T13:28:17.5906823Z git version 2.53.0
+build	Checkout Code	2026-04-26T13:28:17.5931833Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:17.5944931Z Temporarily overriding HOME='/home/runner/work/_temp/7527efac-c8e0-4683-a9e9-f8a16a1b352d' before making global git config changes
+build	Checkout Code	2026-04-26T13:28:17.5945722Z Adding repository directory to the temporary git global config as a safe directory
+build	Checkout Code	2026-04-26T13:28:17.5958410Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Checkout Code	2026-04-26T13:28:17.5993073Z Deleting the contents of '/home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus'
+build	Checkout Code	2026-04-26T13:28:17.6005740Z ##[group]Initializing the repository
+build	Checkout Code	2026-04-26T13:28:17.6009722Z [command]/usr/bin/git init /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Checkout Code	2026-04-26T13:28:17.6091022Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	Checkout Code	2026-04-26T13:28:17.6091878Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	Checkout Code	2026-04-26T13:28:17.6092859Z hint: to use in all of your new repositories, which will suppress this warning,
+build	Checkout Code	2026-04-26T13:28:17.6093462Z hint: call:
+build	Checkout Code	2026-04-26T13:28:17.6093724Z hint:
+build	Checkout Code	2026-04-26T13:28:17.6094145Z hint: 	git config --global init.defaultBranch <name>
+build	Checkout Code	2026-04-26T13:28:17.6094597Z hint:
+build	Checkout Code	2026-04-26T13:28:17.6095066Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	Checkout Code	2026-04-26T13:28:17.6096125Z hint: 'development'. The just-created branch can be renamed via this command:
+build	Checkout Code	2026-04-26T13:28:17.6096643Z hint:
+build	Checkout Code	2026-04-26T13:28:17.6096858Z hint: 	git branch -m <name>
+build	Checkout Code	2026-04-26T13:28:17.6097078Z hint:
+build	Checkout Code	2026-04-26T13:28:17.6097420Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	Checkout Code	2026-04-26T13:28:17.6098276Z Initialized empty Git repository in /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/.git/
+build	Checkout Code	2026-04-26T13:28:17.6105853Z [command]/usr/bin/git remote add origin https://github.com/ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Checkout Code	2026-04-26T13:28:17.6138749Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:17.6139229Z ##[group]Disabling automatic garbage collection
+build	Checkout Code	2026-04-26T13:28:17.6143037Z [command]/usr/bin/git config --local gc.auto 0
+build	Checkout Code	2026-04-26T13:28:17.6171314Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:17.6171767Z ##[group]Setting up auth
+build	Checkout Code	2026-04-26T13:28:17.6177982Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Checkout Code	2026-04-26T13:28:17.6208019Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Checkout Code	2026-04-26T13:28:17.6516045Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Checkout Code	2026-04-26T13:28:17.6547268Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Checkout Code	2026-04-26T13:28:17.6779948Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Checkout Code	2026-04-26T13:28:17.6810526Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Checkout Code	2026-04-26T13:28:17.7056857Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	Checkout Code	2026-04-26T13:28:17.7091439Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:17.7092045Z ##[group]Fetching the repository
+build	Checkout Code	2026-04-26T13:28:17.7099906Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed532289dce10eeecd6e0c492e4b70cdc3a4415c:refs/remotes/origin/main
+build	Checkout Code	2026-04-26T13:28:25.9919718Z From https://github.com/ryzen30xx/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Checkout Code	2026-04-26T13:28:25.9953549Z  * [new ref]             ed532289dce10eeecd6e0c492e4b70cdc3a4415c -> origin/main
+build	Checkout Code	2026-04-26T13:28:25.9954956Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:25.9955532Z ##[group]Determining the checkout info
+build	Checkout Code	2026-04-26T13:28:25.9957650Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:25.9963937Z [command]/usr/bin/git sparse-checkout disable
+build	Checkout Code	2026-04-26T13:28:26.0004986Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	Checkout Code	2026-04-26T13:28:26.0032744Z ##[group]Checking out the ref
+build	Checkout Code	2026-04-26T13:28:26.0037002Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	Checkout Code	2026-04-26T13:28:27.0816945Z Updating files:  24% (16815/68365)
+build	Checkout Code	2026-04-26T13:28:27.1301850Z Updating files:  25% (17092/68365)
+build	Checkout Code	2026-04-26T13:28:27.1690074Z Updating files:  26% (17775/68365)
+build	Checkout Code	2026-04-26T13:28:27.2059293Z Updating files:  27% (18459/68365)
+build	Checkout Code	2026-04-26T13:28:27.2483039Z Updating files:  28% (19143/68365)
+build	Checkout Code	2026-04-26T13:28:27.2874226Z Updating files:  29% (19826/68365)
+build	Checkout Code	2026-04-26T13:28:27.3369531Z Updating files:  30% (20510/68365)
+build	Checkout Code	2026-04-26T13:28:27.3897207Z Updating files:  31% (21194/68365)
+build	Checkout Code	2026-04-26T13:28:27.4683986Z Updating files:  32% (21877/68365)
+build	Checkout Code	2026-04-26T13:28:27.5285545Z Updating files:  33% (22561/68365)
+build	Checkout Code	2026-04-26T13:28:27.5797206Z Updating files:  34% (23245/68365)
+build	Checkout Code	2026-04-26T13:28:27.6398573Z Updating files:  35% (23928/68365)
+build	Checkout Code	2026-04-26T13:28:27.6881164Z Updating files:  36% (24612/68365)
+build	Checkout Code	2026-04-26T13:28:27.7216086Z Updating files:  37% (25296/68365)
+build	Checkout Code	2026-04-26T13:28:27.8644809Z Updating files:  38% (25979/68365)
+build	Checkout Code	2026-04-26T13:28:28.0416501Z Updating files:  39% (26663/68365)
+build	Checkout Code	2026-04-26T13:28:28.0624247Z Updating files:  40% (27346/68365)
+build	Checkout Code	2026-04-26T13:28:28.0996853Z Updating files:  40% (27490/68365)
+build	Checkout Code	2026-04-26T13:28:28.1361121Z Updating files:  41% (28030/68365)
+build	Checkout Code	2026-04-26T13:28:28.2033434Z Updating files:  42% (28714/68365)
+build	Checkout Code	2026-04-26T13:28:28.2663949Z Updating files:  43% (29397/68365)
+build	Checkout Code	2026-04-26T13:28:28.3214847Z Updating files:  44% (30081/68365)
+build	Checkout Code	2026-04-26T13:28:28.3937167Z Updating files:  45% (30765/68365)
+build	Checkout Code	2026-04-26T13:28:28.4566464Z Updating files:  46% (31448/68365)
+build	Checkout Code	2026-04-26T13:28:28.5232786Z Updating files:  47% (32132/68365)
+build	Checkout Code	2026-04-26T13:28:28.5860274Z Updating files:  48% (32816/68365)
+build	Checkout Code	2026-04-26T13:28:28.6417979Z Updating files:  49% (33499/68365)
+build	Checkout Code	2026-04-26T13:28:28.7175666Z Updating files:  50% (34183/68365)
+build	Checkout Code	2026-04-26T13:28:28.7689049Z Updating files:  51% (34867/68365)
+build	Checkout Code	2026-04-26T13:28:28.8348181Z Updating files:  52% (35550/68365)
+build	Checkout Code	2026-04-26T13:28:28.9188327Z Updating files:  53% (36234/68365)
+build	Checkout Code	2026-04-26T13:28:28.9875710Z Updating files:  54% (36918/68365)
+build	Checkout Code	2026-04-26T13:28:29.0623848Z Updating files:  55% (37601/68365)
+build	Checkout Code	2026-04-26T13:28:29.0863294Z Updating files:  55% (38144/68365)
+build	Checkout Code	2026-04-26T13:28:29.1785865Z Updating files:  56% (38285/68365)
+build	Checkout Code	2026-04-26T13:28:29.2601217Z Updating files:  57% (38969/68365)
+build	Checkout Code	2026-04-26T13:28:29.3684177Z Updating files:  58% (39652/68365)
+build	Checkout Code	2026-04-26T13:28:29.4437422Z Updating files:  59% (40336/68365)
+build	Checkout Code	2026-04-26T13:28:29.5147168Z Updating files:  60% (41019/68365)
+build	Checkout Code	2026-04-26T13:28:29.5760112Z Updating files:  61% (41703/68365)
+build	Checkout Code	2026-04-26T13:28:29.6476491Z Updating files:  62% (42387/68365)
+build	Checkout Code	2026-04-26T13:28:29.7033984Z Updating files:  63% (43070/68365)
+build	Checkout Code	2026-04-26T13:28:29.8057176Z Updating files:  64% (43754/68365)
+build	Checkout Code	2026-04-26T13:28:29.9401082Z Updating files:  65% (44438/68365)
+build	Checkout Code	2026-04-26T13:28:29.9968506Z Updating files:  66% (45121/68365)
+build	Checkout Code	2026-04-26T13:28:30.0608965Z Updating files:  67% (45805/68365)
+build	Checkout Code	2026-04-26T13:28:30.0621969Z Updating files:  68% (46489/68365)
+build	Checkout Code	2026-04-26T13:28:30.1003241Z Updating files:  68% (46500/68365)
+build	Checkout Code	2026-04-26T13:28:30.1630741Z Updating files:  69% (47172/68365)
+build	Checkout Code	2026-04-26T13:28:30.2195732Z Updating files:  70% (47856/68365)
+build	Checkout Code	2026-04-26T13:28:30.2932337Z Updating files:  71% (48540/68365)
+build	Checkout Code	2026-04-26T13:28:30.3668070Z Updating files:  72% (49223/68365)
+build	Checkout Code	2026-04-26T13:28:30.4439798Z Updating files:  73% (49907/68365)
+build	Checkout Code	2026-04-26T13:28:30.4990444Z Updating files:  74% (50591/68365)
+build	Checkout Code	2026-04-26T13:28:30.6188636Z Updating files:  75% (51274/68365)
+build	Checkout Code	2026-04-26T13:28:30.6923428Z Updating files:  76% (51958/68365)
+build	Checkout Code	2026-04-26T13:28:30.7675410Z Updating files:  77% (52642/68365)
+build	Checkout Code	2026-04-26T13:28:30.8025491Z Updating files:  78% (53325/68365)
+build	Checkout Code	2026-04-26T13:28:30.8582066Z Updating files:  79% (54009/68365)
+build	Checkout Code	2026-04-26T13:28:30.9072387Z Updating files:  80% (54692/68365)
+build	Checkout Code	2026-04-26T13:28:30.9461495Z Updating files:  81% (55376/68365)
+build	Checkout Code	2026-04-26T13:28:30.9898970Z Updating files:  82% (56060/68365)
+build	Checkout Code	2026-04-26T13:28:31.0317833Z Updating files:  83% (56743/68365)
+build	Checkout Code	2026-04-26T13:28:31.0622853Z Updating files:  84% (57427/68365)
+build	Checkout Code	2026-04-26T13:28:31.0726310Z Updating files:  84% (57946/68365)
+build	Checkout Code	2026-04-26T13:28:31.1418949Z Updating files:  85% (58111/68365)
+build	Checkout Code	2026-04-26T13:28:31.1803262Z Updating files:  86% (58794/68365)
+build	Checkout Code	2026-04-26T13:28:31.2223336Z Updating files:  87% (59478/68365)
+build	Checkout Code	2026-04-26T13:28:31.2507259Z Updating files:  88% (60162/68365)
+build	Checkout Code	2026-04-26T13:28:31.3064128Z Updating files:  89% (60845/68365)
+build	Checkout Code	2026-04-26T13:28:31.3760520Z Updating files:  90% (61529/68365)
+build	Checkout Code	2026-04-26T13:28:31.4359796Z Updating files:  91% (62213/68365)
+build	Checkout Code	2026-04-26T13:28:31.4889282Z Updating files:  92% (62896/68365)
+build	Checkout Code	2026-04-26T13:28:31.5417919Z Updating files:  93% (63580/68365)
+build	Checkout Code	2026-04-26T13:28:31.6093989Z Updating files:  94% (64264/68365)
+build	Checkout Code	2026-04-26T13:28:31.6828312Z Updating files:  95% (64947/68365)
+build	Checkout Code	2026-04-26T13:28:31.7662700Z Updating files:  96% (65631/68365)
+build	Checkout Code	2026-04-26T13:28:31.8118121Z Updating files:  97% (66315/68365)
+build	Checkout Code	2026-04-26T13:28:31.8558842Z Updating files:  98% (66998/68365)
+build	Checkout Code	2026-04-26T13:28:31.8914459Z Updating files:  99% (67682/68365)
+build	Checkout Code	2026-04-26T13:28:31.8915216Z Updating files: 100% (68365/68365)
+build	Checkout Code	2026-04-26T13:28:31.8915553Z Updating files: 100% (68365/68365), done.
+build	Checkout Code	2026-04-26T13:28:31.9630713Z Switched to a new branch 'main'
+build	Checkout Code	2026-04-26T13:28:31.9632013Z branch 'main' set up to track 'origin/main'.
+build	Checkout Code	2026-04-26T13:28:31.9764677Z ##[endgroup]
+build	Checkout Code	2026-04-26T13:28:31.9808036Z [command]/usr/bin/git log -1 --format=%H
+build	Checkout Code	2026-04-26T13:28:31.9833046Z ed532289dce10eeecd6e0c492e4b70cdc3a4415c
+build	Install Build Dependencies	﻿2026-04-26T13:28:31.9938351Z ##[group]Run sudo apt-get update
+build	Install Build Dependencies	2026-04-26T13:28:31.9938636Z [36;1msudo apt-get update[0m
+build	Install Build Dependencies	2026-04-26T13:28:31.9939943Z [36;1msudo apt-get install -y bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev python-is-python3 python3 wget locales[0m
+build	Install Build Dependencies	2026-04-26T13:28:31.9941296Z [36;1mmkdir -p ~/bin[0m
+build	Install Build Dependencies	2026-04-26T13:28:31.9941695Z [36;1mcurl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo[0m
+build	Install Build Dependencies	2026-04-26T13:28:31.9942076Z [36;1mchmod a+x ~/bin/repo[0m
+build	Install Build Dependencies	2026-04-26T13:28:31.9942634Z [36;1mecho "$HOME/bin" >> $GITHUB_PATH[0m
+build	Install Build Dependencies	2026-04-26T13:28:32.0006699Z shell: /usr/bin/bash -e {0}
+build	Install Build Dependencies	2026-04-26T13:28:32.0006946Z ##[endgroup]
+build	Install Build Dependencies	2026-04-26T13:28:32.1797850Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	Install Build Dependencies	2026-04-26T13:28:32.2416095Z Hit:6 https://packages.microsoft.com/repos/azure-cli jammy InRelease
+build	Install Build Dependencies	2026-04-26T13:28:32.2424658Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+build	Install Build Dependencies	2026-04-26T13:28:32.2464699Z Get:8 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
+build	Install Build Dependencies	2026-04-26T13:28:32.2939500Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+build	Install Build Dependencies	2026-04-26T13:28:32.2950157Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.2979064Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.2996735Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.3846212Z Get:9 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [21.9 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.3976247Z Get:10 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [336 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.4033168Z Get:11 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [155 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.4508941Z Get:12 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1213 B]
+build	Install Build Dependencies	2026-04-26T13:28:32.6157764Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3439 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6325670Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [519 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6358802Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [19.6 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6368878Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [5759 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6650094Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [1098 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6716499Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1268 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6794614Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [315 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6819931Z Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [30.5 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6830873Z Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [59.4 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.6845741Z Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [13.5 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.7525727Z Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [70.1 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.7541229Z Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.4 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.7553655Z Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.8 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.7564452Z Get:26 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.9 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8024390Z Get:27 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3174 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8176076Z Get:28 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [448 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8224732Z Get:29 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [14.2 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8244988Z Get:30 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [5594 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8533430Z Get:31 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1070 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8599504Z Get:32 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1029 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8667609Z Get:33 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [226 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8688237Z Get:34 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.9 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8708921Z Get:35 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [52.3 kB]
+build	Install Build Dependencies	2026-04-26T13:28:32.8720625Z Get:36 http://azure.archive.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [10.5 kB]
+build	Install Build Dependencies	2026-04-26T13:28:41.2468569Z Fetched 25.2 MB in 3s (7663 kB/s)
+build	Install Build Dependencies	2026-04-26T13:28:42.2136484Z Reading package lists...
+build	Install Build Dependencies	2026-04-26T13:28:42.2769855Z Reading package lists...
+build	Install Build Dependencies	2026-04-26T13:28:42.4779383Z Building dependency tree...
+build	Install Build Dependencies	2026-04-26T13:28:42.4790503Z Reading state information...
+build	Install Build Dependencies	2026-04-26T13:28:42.6468426Z bc is already the newest version (1.07.1-3build1).
+build	Install Build Dependencies	2026-04-26T13:28:42.6468999Z bc set to manually installed.
+build	Install Build Dependencies	2026-04-26T13:28:42.6469486Z bison is already the newest version (2:3.8.2+dfsg-1build1).
+build	Install Build Dependencies	2026-04-26T13:28:42.6470190Z build-essential is already the newest version (12.9ubuntu3).
+build	Install Build Dependencies	2026-04-26T13:28:42.6470760Z build-essential set to manually installed.
+build	Install Build Dependencies	2026-04-26T13:28:42.6471276Z flex is already the newest version (2.6.4-8build2).
+build	Install Build Dependencies	2026-04-26T13:28:42.6471934Z python-is-python3 is already the newest version (3.9.2-2).
+build	Install Build Dependencies	2026-04-26T13:28:42.6472854Z squashfs-tools is already the newest version (1:4.5-3build1).
+build	Install Build Dependencies	2026-04-26T13:28:42.6473418Z squashfs-tools set to manually installed.
+build	Install Build Dependencies	2026-04-26T13:28:42.6473917Z zip is already the newest version (3.0-12build2).
+build	Install Build Dependencies	2026-04-26T13:28:42.6474459Z curl is already the newest version (7.81.0-1ubuntu1.23).
+build	Install Build Dependencies	2026-04-26T13:28:42.6475035Z gnupg is already the newest version (2.2.27-3ubuntu2.5).
+build	Install Build Dependencies	2026-04-26T13:28:42.6475594Z libssl-dev is already the newest version (3.0.2-0ubuntu1.23).
+build	Install Build Dependencies	2026-04-26T13:28:42.6476222Z libxml2 is already the newest version (2.9.13+dfsg-1ubuntu0.11).
+build	Install Build Dependencies	2026-04-26T13:28:42.6476740Z libxml2 set to manually installed.
+build	Install Build Dependencies	2026-04-26T13:28:42.6477224Z locales is already the newest version (2.35-0ubuntu3.13).
+build	Install Build Dependencies	2026-04-26T13:28:42.6477775Z python3 is already the newest version (3.10.6-1~22.04.1).
+build	Install Build Dependencies	2026-04-26T13:28:42.6478402Z rsync is already the newest version (3.2.7-0ubuntu0.22.04.4).
+build	Install Build Dependencies	2026-04-26T13:28:42.6478994Z wget is already the newest version (1.21.2-2ubuntu1.1).
+build	Install Build Dependencies	2026-04-26T13:28:42.6479660Z zlib1g-dev is already the newest version (1:1.2.11.dfsg-2ubuntu9.2).
+build	Install Build Dependencies	2026-04-26T13:28:42.6480527Z imagemagick is already the newest version (8:6.9.11.60+dfsg-1.3ubuntu0.22.04.5).
+build	Install Build Dependencies	2026-04-26T13:28:42.6481278Z git is already the newest version (1:2.53.0-0ppa1~ubuntu22.04.1).
+build	Install Build Dependencies	2026-04-26T13:28:42.6481870Z The following additional packages will be installed:
+build	Install Build Dependencies	2026-04-26T13:28:42.6482621Z   g++-11-multilib gcc-11-multilib lib32asan6 lib32atomic1 lib32gcc-11-dev
+build	Install Build Dependencies	2026-04-26T13:28:42.6483234Z   lib32gomp1 lib32itm1 lib32ncurses6 lib32ncursesw6 lib32quadmath0
+build	Install Build Dependencies	2026-04-26T13:28:42.6483815Z   lib32readline8 lib32stdc++-11-dev lib32tinfo6 lib32ubsan1 libasound2-dev
+build	Install Build Dependencies	2026-04-26T13:28:42.6484649Z   libasyncns0 libc6-dev-i386 libc6-dev-x32 libc6-x32 libcaca-dev libcaca0
+build	Install Build Dependencies	2026-04-26T13:28:42.6485208Z   libflac8 libgl-dev libglu1-mesa libglu1-mesa-dev libglx-dev libhiredis0.14
+build	Install Build Dependencies	2026-04-26T13:28:42.6485785Z   libopengl0 libopus0 libpulse-dev libpulse-mainloop-glib0 libpulse0
+build	Install Build Dependencies	2026-04-26T13:28:42.6486214Z   libsdl1.2debian libslang2-dev libsndfile1 libtinfo5 libvorbisenc2
+build	Install Build Dependencies	2026-04-26T13:28:42.6486642Z   libx32asan6 libx32atomic1 libx32gcc-11-dev libx32gcc-s1 libx32gomp1
+build	Install Build Dependencies	2026-04-26T13:28:42.6487383Z   libx32itm1 libx32quadmath0 libx32stdc++-11-dev libx32stdc++6 libx32ubsan1
+build	Install Build Dependencies	2026-04-26T13:28:42.6487741Z Suggested packages:
+build	Install Build Dependencies	2026-04-26T13:28:42.6488023Z   distcc | icecc lib32stdc++6-11-dbg libx32stdc++6-11-dbg ncurses-doc
+build	Install Build Dependencies	2026-04-26T13:28:42.6488477Z   libasound2-doc opus-tools pulseaudio
+build	Install Build Dependencies	2026-04-26T13:28:42.6914437Z The following NEW packages will be installed:
+build	Install Build Dependencies	2026-04-26T13:28:42.6915137Z   ccache g++-11-multilib g++-multilib gcc-11-multilib gcc-multilib gperf
+build	Install Build Dependencies	2026-04-26T13:28:42.6915923Z   lib32asan6 lib32atomic1 lib32gcc-11-dev lib32gomp1 lib32itm1
+build	Install Build Dependencies	2026-04-26T13:28:42.6916614Z   lib32ncurses-dev lib32ncurses6 lib32ncursesw6 lib32quadmath0
+build	Install Build Dependencies	2026-04-26T13:28:42.6917407Z   lib32readline-dev lib32readline8 lib32stdc++-11-dev lib32tinfo6 lib32ubsan1
+build	Install Build Dependencies	2026-04-26T13:28:42.6918381Z   lib32z1-dev libasound2-dev libasyncns0 libc6-dev-i386 libc6-dev-x32
+build	Install Build Dependencies	2026-04-26T13:28:42.6919111Z   libc6-x32 libcaca-dev libcaca0 libflac8 libgl-dev libglu1-mesa
+build	Install Build Dependencies	2026-04-26T13:28:42.6921334Z   libglu1-mesa-dev libglx-dev libhiredis0.14 liblz4-tool libncurses5
+build	Install Build Dependencies	2026-04-26T13:28:42.6922096Z   libncurses5-dev libopengl0 libopus0 libpulse-dev libpulse-mainloop-glib0
+build	Install Build Dependencies	2026-04-26T13:28:42.6922845Z   libpulse0 libsdl1.2-dev libsdl1.2debian libslang2-dev libsndfile1 libtinfo5
+build	Install Build Dependencies	2026-04-26T13:28:42.6923331Z   libvorbisenc2 libx32asan6 libx32atomic1 libx32gcc-11-dev libx32gcc-s1
+build	Install Build Dependencies	2026-04-26T13:28:42.6923792Z   libx32gomp1 libx32itm1 libx32quadmath0 libx32stdc++-11-dev libx32stdc++6
+build	Install Build Dependencies	2026-04-26T13:28:42.6924239Z   libx32ubsan1 libxml2-utils lzop pngcrush schedtool xsltproc
+build	Install Build Dependencies	2026-04-26T13:28:42.7099642Z 0 upgraded, 63 newly installed, 0 to remove and 38 not upgraded.
+build	Install Build Dependencies	2026-04-26T13:28:42.7100201Z Need to get 26.2 MB of archives.
+build	Install Build Dependencies	2026-04-26T13:28:42.7100665Z After this operation, 114 MB of additional disk space will be used.
+build	Install Build Dependencies	2026-04-26T13:28:42.7101073Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	Install Build Dependencies	2026-04-26T13:28:47.9022717Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libhiredis0.14 amd64 0.14.1-2 [32.8 kB]
+build	Install Build Dependencies	2026-04-26T13:28:47.9103388Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 ccache amd64 4.5.1-1 [495 kB]
+build	Install Build Dependencies	2026-04-26T13:28:47.9223945Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev-i386 amd64 2.35-0ubuntu3.13 [1445 kB]
+build	Install Build Dependencies	2026-04-26T13:28:47.9427436Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-x32 amd64 2.35-0ubuntu3.13 [2978 kB]
+build	Install Build Dependencies	2026-04-26T13:28:47.9769551Z Get:6 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev-x32 amd64 2.35-0ubuntu3.13 [1632 kB]
+build	Install Build Dependencies	2026-04-26T13:28:47.9982829Z Get:7 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32gcc-s1 amd64 12.3.0-1ubuntu1~22.04.3 [54.0 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.0057622Z Get:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32gomp1 amd64 12.3.0-1ubuntu1~22.04.3 [133 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.0138540Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32gomp1 amd64 12.3.0-1ubuntu1~22.04.3 [127 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.0220652Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32itm1 amd64 12.3.0-1ubuntu1~22.04.3 [32.0 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.0292526Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32itm1 amd64 12.3.0-1ubuntu1~22.04.3 [30.2 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.0363245Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32atomic1 amd64 12.3.0-1ubuntu1~22.04.3 [8516 B]
+build	Install Build Dependencies	2026-04-26T13:28:48.0432509Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32atomic1 amd64 12.3.0-1ubuntu1~22.04.3 [10.2 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.0561675Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32asan6 amd64 11.4.0-1ubuntu1~22.04.3 [2154 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.0782848Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32asan6 amd64 11.4.0-1ubuntu1~22.04.3 [2129 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.1033205Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ubsan1 amd64 12.3.0-1ubuntu1~22.04.3 [959 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.1185855Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32stdc++6 amd64 12.3.0-1ubuntu1~22.04.3 [682 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.1314381Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32ubsan1 amd64 12.3.0-1ubuntu1~22.04.3 [963 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.1473002Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32quadmath0 amd64 12.3.0-1ubuntu1~22.04.3 [244 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.1988837Z Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32quadmath0 amd64 12.3.0-1ubuntu1~22.04.3 [156 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.2070807Z Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32gcc-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2339 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.2351517Z Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32gcc-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2107 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.2633889Z Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-multilib amd64 11.4.0-1ubuntu1~22.04.3 [880 B]
+build	Install Build Dependencies	2026-04-26T13:28:48.2706193Z Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32stdc++-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [989 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.2907998Z Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx32stdc++-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [906 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.3073389Z Get:26 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11-multilib amd64 11.4.0-1ubuntu1~22.04.3 [894 B]
+build	Install Build Dependencies	2026-04-26T13:28:48.3140171Z Get:27 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 gcc-multilib amd64 4:11.2.0-1ubuntu1 [1382 B]
+build	Install Build Dependencies	2026-04-26T13:28:48.3208022Z Get:28 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 g++-multilib amd64 4:11.2.0-1ubuntu1 [854 B]
+build	Install Build Dependencies	2026-04-26T13:28:48.3276947Z Get:29 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 gperf amd64 3.1-1build1 [103 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.3355184Z Get:30 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32tinfo6 amd64 6.3-2ubuntu0.1 [103 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.3429683Z Get:31 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ncurses6 amd64 6.3-2ubuntu0.1 [118 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.3508763Z Get:32 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ncursesw6 amd64 6.3-2ubuntu0.1 [157 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.3591407Z Get:33 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32ncurses-dev amd64 6.3-2ubuntu0.1 [350 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.3721716Z Get:34 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 lib32readline8 amd64 8.1.2-1 [154 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.3913936Z Get:35 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 lib32readline-dev amd64 8.1.2-1 [161 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.4004211Z Get:36 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 lib32z1-dev amd64 1:1.2.11.dfsg-2ubuntu9.2 [62.1 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.4084716Z Get:37 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasound2-dev amd64 1.2.6.1-1ubuntu1.1 [110 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.4625890Z Get:38 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libasyncns0 amd64 0.8-6build2 [12.8 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.4696092Z Get:39 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcaca0 amd64 0.99.beta19-2.2ubuntu4.1 [224 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.4800816Z Get:40 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libslang2-dev amd64 2.3.2-5build4 [437 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.4919587Z Get:41 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcaca-dev amd64 0.99.beta19-2.2ubuntu4.1 [772 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5074731Z Get:42 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libflac8 amd64 1.3.3-2ubuntu0.2 [111 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5160324Z Get:43 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libglx-dev amd64 1.4.0-1 [14.1 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5235090Z Get:44 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libgl-dev amd64 1.4.0-1 [101 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5325801Z Get:45 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libopengl0 amd64 1.4.0-1 [36.5 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5421553Z Get:46 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libglu1-mesa amd64 9.0.2-1 [145 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5505677Z Get:47 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libglu1-mesa-dev amd64 9.0.2-1 [231 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5601604Z Get:48 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libtinfo5 amd64 6.3-2ubuntu0.1 [100 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5678988Z Get:49 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libncurses5 amd64 6.3-2ubuntu0.1 [107 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5757798Z Get:50 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libncurses5-dev amd64 6.3-2ubuntu0.1 [790 B]
+build	Install Build Dependencies	2026-04-26T13:28:48.5828297Z Get:51 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libopus0 amd64 1.3.1-0.1build2 [203 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5919584Z Get:52 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libvorbisenc2 amd64 1.3.7-1build2 [82.6 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.5995781Z Get:53 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsndfile1 amd64 1.0.31-2ubuntu0.2 [196 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.6081509Z Get:54 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpulse0 amd64 1:15.99.1+dfsg1-1ubuntu2.2 [298 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.6175945Z Get:55 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpulse-mainloop-glib0 amd64 1:15.99.1+dfsg1-1ubuntu2.2 [12.4 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.6245137Z Get:56 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpulse-dev amd64 1:15.99.1+dfsg1-1ubuntu2.2 [75.6 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.6750769Z Get:57 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libsdl1.2debian amd64 1.2.15+dfsg2-6 [177 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.6837966Z Get:58 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libsdl1.2-dev amd64 1.2.15+dfsg2-6 [708 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.6978218Z Get:59 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxml2-utils amd64 2.9.13+dfsg-1ubuntu0.11 [40.2 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.7052131Z Get:60 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 lzop amd64 1.04-2build2 [83.7 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.7127829Z Get:61 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 pngcrush amd64 1.8.13-0.1 [52.8 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.7198620Z Get:62 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 xsltproc amd64 1.1.34-4ubuntu0.22.04.5 [14.7 kB]
+build	Install Build Dependencies	2026-04-26T13:28:48.7267640Z Get:63 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 liblz4-tool all 1.9.3-2build2 [2342 B]
+build	Install Build Dependencies	2026-04-26T13:28:48.7336716Z Get:64 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 schedtool amd64 1.3.0-4 [22.0 kB]
+build	Install Build Dependencies	2026-04-26T13:28:49.1671538Z Fetched 26.2 MB in 6s (4340 kB/s)
+build	Install Build Dependencies	2026-04-26T13:28:49.2065262Z Selecting previously unselected package libhiredis0.14:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:49.2846870Z (Reading database ... 
+build	Install Build Dependencies	2026-04-26T13:28:49.2847195Z (Reading database ... 5%
+build	Install Build Dependencies	2026-04-26T13:28:49.2847467Z (Reading database ... 10%
+build	Install Build Dependencies	2026-04-26T13:28:49.2847676Z (Reading database ... 15%
+build	Install Build Dependencies	2026-04-26T13:28:49.2848038Z (Reading database ... 20%
+build	Install Build Dependencies	2026-04-26T13:28:49.2848327Z (Reading database ... 25%
+build	Install Build Dependencies	2026-04-26T13:28:49.2848645Z (Reading database ... 30%
+build	Install Build Dependencies	2026-04-26T13:28:49.2848910Z (Reading database ... 35%
+build	Install Build Dependencies	2026-04-26T13:28:49.2849106Z (Reading database ... 40%
+build	Install Build Dependencies	2026-04-26T13:28:49.2849308Z (Reading database ... 45%
+build	Install Build Dependencies	2026-04-26T13:28:49.2849504Z (Reading database ... 50%
+build	Install Build Dependencies	2026-04-26T13:28:49.5724168Z (Reading database ... 55%
+build	Install Build Dependencies	2026-04-26T13:28:49.7015668Z (Reading database ... 60%
+build	Install Build Dependencies	2026-04-26T13:28:49.8063344Z (Reading database ... 65%
+build	Install Build Dependencies	2026-04-26T13:28:50.1397823Z (Reading database ... 70%
+build	Install Build Dependencies	2026-04-26T13:28:50.4469007Z (Reading database ... 75%
+build	Install Build Dependencies	2026-04-26T13:28:50.7719722Z (Reading database ... 80%
+build	Install Build Dependencies	2026-04-26T13:28:51.3866550Z (Reading database ... 85%
+build	Install Build Dependencies	2026-04-26T13:28:51.9144644Z (Reading database ... 90%
+build	Install Build Dependencies	2026-04-26T13:28:52.5643546Z (Reading database ... 95%
+build	Install Build Dependencies	2026-04-26T13:28:52.5644456Z (Reading database ... 100%
+build	Install Build Dependencies	2026-04-26T13:28:52.5644975Z (Reading database ... 286901 files and directories currently installed.)
+build	Install Build Dependencies	2026-04-26T13:28:52.5719099Z Preparing to unpack .../00-libhiredis0.14_0.14.1-2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:52.5752812Z Unpacking libhiredis0.14:amd64 (0.14.1-2) ...
+build	Install Build Dependencies	2026-04-26T13:28:52.6049399Z Selecting previously unselected package ccache.
+build	Install Build Dependencies	2026-04-26T13:28:52.6241073Z Preparing to unpack .../01-ccache_4.5.1-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:52.6248948Z Unpacking ccache (4.5.1-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:52.6863649Z Selecting previously unselected package libc6-dev-i386.
+build	Install Build Dependencies	2026-04-26T13:28:52.7059237Z Preparing to unpack .../02-libc6-dev-i386_2.35-0ubuntu3.13_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:52.7065902Z Unpacking libc6-dev-i386 (2.35-0ubuntu3.13) ...
+build	Install Build Dependencies	2026-04-26T13:28:52.7758751Z Selecting previously unselected package libc6-x32.
+build	Install Build Dependencies	2026-04-26T13:28:52.7956671Z Preparing to unpack .../03-libc6-x32_2.35-0ubuntu3.13_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:52.7965246Z Unpacking libc6-x32 (2.35-0ubuntu3.13) ...
+build	Install Build Dependencies	2026-04-26T13:28:52.9031346Z Selecting previously unselected package libc6-dev-x32.
+build	Install Build Dependencies	2026-04-26T13:28:52.9230517Z Preparing to unpack .../04-libc6-dev-x32_2.35-0ubuntu3.13_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:52.9236842Z Unpacking libc6-dev-x32 (2.35-0ubuntu3.13) ...
+build	Install Build Dependencies	2026-04-26T13:28:52.9781069Z Selecting previously unselected package libx32gcc-s1.
+build	Install Build Dependencies	2026-04-26T13:28:52.9977887Z Preparing to unpack .../05-libx32gcc-s1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:52.9985653Z Unpacking libx32gcc-s1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.0278803Z Selecting previously unselected package lib32gomp1.
+build	Install Build Dependencies	2026-04-26T13:28:53.0473402Z Preparing to unpack .../06-lib32gomp1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.0480463Z Unpacking lib32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.0701554Z Selecting previously unselected package libx32gomp1.
+build	Install Build Dependencies	2026-04-26T13:28:53.0890855Z Preparing to unpack .../07-libx32gomp1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.0897683Z Unpacking libx32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.1159651Z Selecting previously unselected package lib32itm1.
+build	Install Build Dependencies	2026-04-26T13:28:53.1346816Z Preparing to unpack .../08-lib32itm1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.1354607Z Unpacking lib32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.1566158Z Selecting previously unselected package libx32itm1.
+build	Install Build Dependencies	2026-04-26T13:28:53.1752539Z Preparing to unpack .../09-libx32itm1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.1759353Z Unpacking libx32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.1969706Z Selecting previously unselected package lib32atomic1.
+build	Install Build Dependencies	2026-04-26T13:28:53.2155962Z Preparing to unpack .../10-lib32atomic1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.2163067Z Unpacking lib32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.2369659Z Selecting previously unselected package libx32atomic1.
+build	Install Build Dependencies	2026-04-26T13:28:53.2552708Z Preparing to unpack .../11-libx32atomic1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.2559963Z Unpacking libx32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.2761422Z Selecting previously unselected package lib32asan6.
+build	Install Build Dependencies	2026-04-26T13:28:53.2947535Z Preparing to unpack .../12-lib32asan6_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.2955213Z Unpacking lib32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.3430246Z Selecting previously unselected package libx32asan6.
+build	Install Build Dependencies	2026-04-26T13:28:53.3626904Z Preparing to unpack .../13-libx32asan6_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.3634606Z Unpacking libx32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.4117493Z Selecting previously unselected package lib32ubsan1.
+build	Install Build Dependencies	2026-04-26T13:28:53.4313313Z Preparing to unpack .../14-lib32ubsan1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.4320486Z Unpacking lib32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.4653162Z Selecting previously unselected package libx32stdc++6.
+build	Install Build Dependencies	2026-04-26T13:28:53.4845529Z Preparing to unpack .../15-libx32stdc++6_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.4853029Z Unpacking libx32stdc++6 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.5135202Z Selecting previously unselected package libx32ubsan1.
+build	Install Build Dependencies	2026-04-26T13:28:53.5327282Z Preparing to unpack .../16-libx32ubsan1_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.5335683Z Unpacking libx32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.5655032Z Selecting previously unselected package lib32quadmath0.
+build	Install Build Dependencies	2026-04-26T13:28:53.5846132Z Preparing to unpack .../17-lib32quadmath0_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.5852677Z Unpacking lib32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.6084213Z Selecting previously unselected package libx32quadmath0.
+build	Install Build Dependencies	2026-04-26T13:28:53.6274000Z Preparing to unpack .../18-libx32quadmath0_12.3.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.6281073Z Unpacking libx32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.6497502Z Selecting previously unselected package lib32gcc-11-dev.
+build	Install Build Dependencies	2026-04-26T13:28:53.6686232Z Preparing to unpack .../19-lib32gcc-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.6693038Z Unpacking lib32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.7195314Z Selecting previously unselected package libx32gcc-11-dev.
+build	Install Build Dependencies	2026-04-26T13:28:53.7391295Z Preparing to unpack .../20-libx32gcc-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.7397412Z Unpacking libx32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.7872122Z Selecting previously unselected package gcc-11-multilib.
+build	Install Build Dependencies	2026-04-26T13:28:53.8068432Z Preparing to unpack .../21-gcc-11-multilib_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.8075110Z Unpacking gcc-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.8269845Z Selecting previously unselected package lib32stdc++-11-dev.
+build	Install Build Dependencies	2026-04-26T13:28:53.8458164Z Preparing to unpack .../22-lib32stdc++-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.8464610Z Unpacking lib32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.9145310Z Selecting previously unselected package libx32stdc++-11-dev.
+build	Install Build Dependencies	2026-04-26T13:28:53.9343279Z Preparing to unpack .../23-libx32stdc++-11-dev_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:53.9350430Z Unpacking libx32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:53.9905424Z Selecting previously unselected package g++-11-multilib.
+build	Install Build Dependencies	2026-04-26T13:28:54.0101843Z Preparing to unpack .../24-g++-11-multilib_11.4.0-1ubuntu1~22.04.3_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.0109751Z Unpacking g++-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.0303531Z Selecting previously unselected package gcc-multilib.
+build	Install Build Dependencies	2026-04-26T13:28:54.0490774Z Preparing to unpack .../25-gcc-multilib_4%3a11.2.0-1ubuntu1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.0497597Z Unpacking gcc-multilib (4:11.2.0-1ubuntu1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.0691304Z Selecting previously unselected package g++-multilib.
+build	Install Build Dependencies	2026-04-26T13:28:54.0875285Z Preparing to unpack .../26-g++-multilib_4%3a11.2.0-1ubuntu1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.0882039Z Unpacking g++-multilib (4:11.2.0-1ubuntu1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.1077182Z Selecting previously unselected package gperf.
+build	Install Build Dependencies	2026-04-26T13:28:54.1269379Z Preparing to unpack .../27-gperf_3.1-1build1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.1276965Z Unpacking gperf (3.1-1build1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.1680740Z Selecting previously unselected package lib32tinfo6.
+build	Install Build Dependencies	2026-04-26T13:28:54.1871770Z Preparing to unpack .../28-lib32tinfo6_6.3-2ubuntu0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.1879562Z Unpacking lib32tinfo6 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.2106672Z Selecting previously unselected package lib32ncurses6.
+build	Install Build Dependencies	2026-04-26T13:28:54.2297587Z Preparing to unpack .../29-lib32ncurses6_6.3-2ubuntu0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.2304726Z Unpacking lib32ncurses6 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.2534757Z Selecting previously unselected package lib32ncursesw6.
+build	Install Build Dependencies	2026-04-26T13:28:54.2720515Z Preparing to unpack .../30-lib32ncursesw6_6.3-2ubuntu0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.2728020Z Unpacking lib32ncursesw6 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.2953576Z Selecting previously unselected package lib32ncurses-dev.
+build	Install Build Dependencies	2026-04-26T13:28:54.3143236Z Preparing to unpack .../31-lib32ncurses-dev_6.3-2ubuntu0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.3150456Z Unpacking lib32ncurses-dev (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.3440305Z Selecting previously unselected package lib32readline8.
+build	Install Build Dependencies	2026-04-26T13:28:54.3627237Z Preparing to unpack .../32-lib32readline8_8.1.2-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.3634668Z Unpacking lib32readline8 (8.1.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.3861488Z Selecting previously unselected package lib32readline-dev.
+build	Install Build Dependencies	2026-04-26T13:28:54.4051722Z Preparing to unpack .../33-lib32readline-dev_8.1.2-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.4058778Z Unpacking lib32readline-dev (8.1.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.4283392Z Selecting previously unselected package lib32z1-dev.
+build	Install Build Dependencies	2026-04-26T13:28:54.4472086Z Preparing to unpack .../34-lib32z1-dev_1%3a1.2.11.dfsg-2ubuntu9.2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.4479744Z Unpacking lib32z1-dev (1:1.2.11.dfsg-2ubuntu9.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.4692326Z Selecting previously unselected package libasound2-dev:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.4880673Z Preparing to unpack .../35-libasound2-dev_1.2.6.1-1ubuntu1.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.4911342Z Unpacking libasound2-dev:amd64 (1.2.6.1-1ubuntu1.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.5281372Z Selecting previously unselected package libasyncns0:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.5470338Z Preparing to unpack .../36-libasyncns0_0.8-6build2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.5478368Z Unpacking libasyncns0:amd64 (0.8-6build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.5688890Z Selecting previously unselected package libcaca0:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.5876456Z Preparing to unpack .../37-libcaca0_0.99.beta19-2.2ubuntu4.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.5884574Z Unpacking libcaca0:amd64 (0.99.beta19-2.2ubuntu4.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.6134368Z Selecting previously unselected package libslang2-dev:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.6325642Z Preparing to unpack .../38-libslang2-dev_2.3.2-5build4_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.6334075Z Unpacking libslang2-dev:amd64 (2.3.2-5build4) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.6640770Z Selecting previously unselected package libcaca-dev.
+build	Install Build Dependencies	2026-04-26T13:28:54.6828696Z Preparing to unpack .../39-libcaca-dev_0.99.beta19-2.2ubuntu4.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.6836480Z Unpacking libcaca-dev (0.99.beta19-2.2ubuntu4.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.8104648Z Selecting previously unselected package libflac8:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.8303408Z Preparing to unpack .../40-libflac8_1.3.3-2ubuntu0.2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.8310575Z Unpacking libflac8:amd64 (1.3.3-2ubuntu0.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.8526613Z Selecting previously unselected package libglx-dev:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.8716350Z Preparing to unpack .../41-libglx-dev_1.4.0-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.8723501Z Unpacking libglx-dev:amd64 (1.4.0-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.9046926Z Selecting previously unselected package libgl-dev:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.9237472Z Preparing to unpack .../42-libgl-dev_1.4.0-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.9244998Z Unpacking libgl-dev:amd64 (1.4.0-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.9510784Z Selecting previously unselected package libopengl0:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:54.9701598Z Preparing to unpack .../43-libopengl0_1.4.0-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:54.9708944Z Unpacking libopengl0:amd64 (1.4.0-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:54.9929324Z Selecting previously unselected package libglu1-mesa:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.0114842Z Preparing to unpack .../44-libglu1-mesa_9.0.2-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.0122707Z Unpacking libglu1-mesa:amd64 (9.0.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.0344951Z Selecting previously unselected package libglu1-mesa-dev:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.0534933Z Preparing to unpack .../45-libglu1-mesa-dev_9.0.2-1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.0542834Z Unpacking libglu1-mesa-dev:amd64 (9.0.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.0790895Z Selecting previously unselected package libtinfo5:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.0979513Z Preparing to unpack .../46-libtinfo5_6.3-2ubuntu0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.0986444Z Unpacking libtinfo5:amd64 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.1215324Z Selecting previously unselected package libncurses5:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.1407927Z Preparing to unpack .../47-libncurses5_6.3-2ubuntu0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.1415919Z Unpacking libncurses5:amd64 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.1634802Z Selecting previously unselected package libncurses5-dev:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.1823925Z Preparing to unpack .../48-libncurses5-dev_6.3-2ubuntu0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.1831481Z Unpacking libncurses5-dev:amd64 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.2032742Z Selecting previously unselected package libopus0:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.2221558Z Preparing to unpack .../49-libopus0_1.3.1-0.1build2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.2228828Z Unpacking libopus0:amd64 (1.3.1-0.1build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.2458973Z Selecting previously unselected package libvorbisenc2:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.2645631Z Preparing to unpack .../50-libvorbisenc2_1.3.7-1build2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.2652664Z Unpacking libvorbisenc2:amd64 (1.3.7-1build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.2890018Z Selecting previously unselected package libsndfile1:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.3080602Z Preparing to unpack .../51-libsndfile1_1.0.31-2ubuntu0.2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.3088626Z Unpacking libsndfile1:amd64 (1.0.31-2ubuntu0.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.3336391Z Selecting previously unselected package libpulse0:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.3521817Z Preparing to unpack .../52-libpulse0_1%3a15.99.1+dfsg1-1ubuntu2.2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.3666539Z Unpacking libpulse0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.3930326Z Selecting previously unselected package libpulse-mainloop-glib0:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.4124123Z Preparing to unpack .../53-libpulse-mainloop-glib0_1%3a15.99.1+dfsg1-1ubuntu2.2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.4132647Z Unpacking libpulse-mainloop-glib0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.4336745Z Selecting previously unselected package libpulse-dev:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.4523261Z Preparing to unpack .../54-libpulse-dev_1%3a15.99.1+dfsg1-1ubuntu2.2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.4530078Z Unpacking libpulse-dev:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.4952387Z Selecting previously unselected package libsdl1.2debian:amd64.
+build	Install Build Dependencies	2026-04-26T13:28:55.5145104Z Preparing to unpack .../55-libsdl1.2debian_1.2.15+dfsg2-6_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.5152484Z Unpacking libsdl1.2debian:amd64 (1.2.15+dfsg2-6) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.5482289Z Selecting previously unselected package libsdl1.2-dev.
+build	Install Build Dependencies	2026-04-26T13:28:55.5674086Z Preparing to unpack .../56-libsdl1.2-dev_1.2.15+dfsg2-6_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.5681312Z Unpacking libsdl1.2-dev (1.2.15+dfsg2-6) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.6830410Z Selecting previously unselected package libxml2-utils.
+build	Install Build Dependencies	2026-04-26T13:28:55.7030560Z Preparing to unpack .../57-libxml2-utils_2.9.13+dfsg-1ubuntu0.11_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.7037459Z Unpacking libxml2-utils (2.9.13+dfsg-1ubuntu0.11) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.7395144Z Selecting previously unselected package lzop.
+build	Install Build Dependencies	2026-04-26T13:28:55.7587414Z Preparing to unpack .../58-lzop_1.04-2build2_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.7594410Z Unpacking lzop (1.04-2build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.7859734Z Selecting previously unselected package pngcrush.
+build	Install Build Dependencies	2026-04-26T13:28:55.8052055Z Preparing to unpack .../59-pngcrush_1.8.13-0.1_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.8058620Z Unpacking pngcrush (1.8.13-0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.8375096Z Selecting previously unselected package xsltproc.
+build	Install Build Dependencies	2026-04-26T13:28:55.8567592Z Preparing to unpack .../60-xsltproc_1.1.34-4ubuntu0.22.04.5_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.8574768Z Unpacking xsltproc (1.1.34-4ubuntu0.22.04.5) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.8855062Z Selecting previously unselected package liblz4-tool.
+build	Install Build Dependencies	2026-04-26T13:28:55.9046126Z Preparing to unpack .../61-liblz4-tool_1.9.3-2build2_all.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.9053561Z Unpacking liblz4-tool (1.9.3-2build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.9251512Z Selecting previously unselected package schedtool.
+build	Install Build Dependencies	2026-04-26T13:28:55.9437838Z Preparing to unpack .../62-schedtool_1.3.0-4_amd64.deb ...
+build	Install Build Dependencies	2026-04-26T13:28:55.9444814Z Unpacking schedtool (1.3.0-4) ...
+build	Install Build Dependencies	2026-04-26T13:28:55.9986493Z Setting up libslang2-dev:amd64 (2.3.2-5build4) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0006236Z Setting up libc6-dev-i386 (2.35-0ubuntu3.13) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0022784Z Setting up lib32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0039451Z Setting up libcaca0:amd64 (0.99.beta19-2.2ubuntu4.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0056960Z Setting up pngcrush (1.8.13-0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0073523Z Setting up xsltproc (1.1.34-4ubuntu0.22.04.5) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0089561Z Setting up lib32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0106285Z Setting up gperf (3.1-1build1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0123716Z Setting up libopengl0:amd64 (1.4.0-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0139725Z Setting up libflac8:amd64 (1.3.3-2ubuntu0.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0156460Z Setting up libc6-x32 (2.35-0ubuntu3.13) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0179195Z Setting up libc6-dev-x32 (2.35-0ubuntu3.13) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0195434Z Setting up lib32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0213773Z Setting up libopus0:amd64 (1.3.1-0.1build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0231054Z Setting up lib32z1-dev (1:1.2.11.dfsg-2ubuntu9.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0247715Z Setting up libx32gomp1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0264674Z Setting up lib32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0281211Z Setting up liblz4-tool (1.9.3-2build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0298000Z Setting up libasyncns0:amd64 (0.8-6build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0315226Z Setting up lib32tinfo6 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0331426Z Setting up lzop (1.04-2build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0348194Z Setting up libncurses5-dev:amd64 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0365238Z Setting up lib32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0381808Z Setting up libglx-dev:amd64 (1.4.0-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0399673Z Setting up libx32quadmath0 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0416509Z Setting up libglu1-mesa:amd64 (9.0.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0433625Z Setting up libxml2-utils (2.9.13+dfsg-1ubuntu0.11) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0450031Z Setting up libasound2-dev:amd64 (1.2.6.1-1ubuntu1.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0467304Z Setting up libcaca-dev (0.99.beta19-2.2ubuntu4.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0484080Z Setting up libtinfo5:amd64 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0500969Z Setting up lib32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0518666Z Setting up libgl-dev:amd64 (1.4.0-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0537607Z Setting up libvorbisenc2:amd64 (1.3.7-1build2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0556462Z Setting up schedtool (1.3.0-4) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0573966Z Setting up libhiredis0.14:amd64 (0.14.1-2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0591350Z Setting up libx32atomic1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0611245Z Setting up libx32gcc-s1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0629086Z Setting up lib32readline8 (8.1.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0646265Z Setting up ccache (4.5.1-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0668091Z Updating symlinks in /usr/lib/ccache ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0834428Z Setting up lib32ncurses6 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0852453Z Setting up libx32itm1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0869417Z Setting up lib32ncursesw6 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0886091Z Setting up libncurses5:amd64 (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0902812Z Setting up libx32asan6 (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0919765Z Setting up libglu1-mesa-dev:amd64 (9.0.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0936573Z Setting up libsndfile1:amd64 (1.0.31-2ubuntu0.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0953466Z Setting up libx32stdc++6 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0969223Z Setting up lib32ncurses-dev (6.3-2ubuntu0.1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.0986144Z Setting up libx32ubsan1 (12.3.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1003219Z Setting up libpulse0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1073673Z Setting up libx32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1091262Z Setting up libpulse-mainloop-glib0:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1108225Z Setting up libsdl1.2debian:amd64 (1.2.15+dfsg2-6) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1125636Z Setting up libx32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1142486Z Setting up libpulse-dev:amd64 (1:15.99.1+dfsg1-1ubuntu2.2) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1160863Z Setting up lib32gcc-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1179635Z Setting up lib32readline-dev (8.1.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1197279Z Setting up lib32stdc++-11-dev (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1222800Z Setting up libsdl1.2-dev (1.2.15+dfsg2-6) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1239611Z Setting up gcc-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1265947Z Setting up gcc-multilib (4:11.2.0-1ubuntu1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1283317Z Setting up g++-11-multilib (11.4.0-1ubuntu1~22.04.3) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1299497Z Setting up g++-multilib (4:11.2.0-1ubuntu1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.1324873Z Processing triggers for install-info (6.8-4build1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.3372974Z Processing triggers for libc-bin (2.35-0ubuntu3.13) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.4373890Z Processing triggers for man-db (2.10.2-1) ...
+build	Install Build Dependencies	2026-04-26T13:28:56.4426560Z Not building database; man-db/auto-update is not 'true'.
+build	Install Build Dependencies	2026-04-26T13:28:57.4229649Z 
+build	Install Build Dependencies	2026-04-26T13:28:57.4230161Z Running kernel seems to be up-to-date.
+build	Install Build Dependencies	2026-04-26T13:28:57.4230552Z 
+build	Install Build Dependencies	2026-04-26T13:28:57.4230661Z No services need to be restarted.
+build	Install Build Dependencies	2026-04-26T13:28:57.4230837Z 
+build	Install Build Dependencies	2026-04-26T13:28:57.4230935Z No containers need to be restarted.
+build	Install Build Dependencies	2026-04-26T13:28:57.4231103Z 
+build	Install Build Dependencies	2026-04-26T13:28:57.4231216Z No user sessions are running outdated binaries.
+build	Install Build Dependencies	2026-04-26T13:28:57.4231444Z 
+build	Install Build Dependencies	2026-04-26T13:28:57.4231625Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+build	Install Build Dependencies	2026-04-26T13:28:58.7643644Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+build	Install Build Dependencies	2026-04-26T13:28:58.7644366Z                                  Dload  Upload   Total   Spent    Left  Speed
+build	Install Build Dependencies	2026-04-26T13:28:58.7644722Z 
+build	Install Build Dependencies	2026-04-26T13:28:58.8589798Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+build	Install Build Dependencies	2026-04-26T13:28:58.8590320Z 100 44950  100 44950    0     0   463k      0 --:--:-- --:--:-- --:--:--  466k
+build	Configure Git	﻿2026-04-26T13:28:58.8658766Z ##[group]Run git config --global user.name "GitHub Actions"
+build	Configure Git	2026-04-26T13:28:58.8659182Z [36;1mgit config --global user.name "GitHub Actions"[0m
+build	Configure Git	2026-04-26T13:28:58.8659531Z [36;1mgit config --global user.email "actions@github.com"[0m
+build	Configure Git	2026-04-26T13:28:58.8721721Z shell: /usr/bin/bash -e {0}
+build	Configure Git	2026-04-26T13:28:58.8721982Z ##[endgroup]
+build	Run Build Script	﻿2026-04-26T13:28:58.8853621Z ##[group]Run ./build.sh
+build	Run Build Script	2026-04-26T13:28:58.8853865Z [36;1m./build.sh[0m
+build	Run Build Script	2026-04-26T13:28:58.8907533Z shell: /usr/bin/bash -e {0}
+build	Run Build Script	2026-04-26T13:28:58.8907782Z ##[endgroup]
+build	Run Build Script	2026-04-26T13:28:58.8995006Z ======================================
+build	Run Build Script	2026-04-26T13:28:58.8995398Z  Ubuntu Touch (d2s) Halium Builder 
+build	Run Build Script	2026-04-26T13:28:58.8995654Z ======================================
+build	Run Build Script	2026-04-26T13:28:58.9010313Z >>> Initializing Halium 11 Repository...
+build	Run Build Script	2026-04-26T13:29:00.5979416Z 
+build	Run Build Script	2026-04-26T13:29:00.5980589Z repo has been initialized in /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/workspace
+build	Run Build Script	2026-04-26T13:29:00.6193278Z >>> Setting up local manifests...
+build	Run Build Script	2026-04-26T13:29:00.6224141Z >>> Syncing sources (This will take a while)...
+build	Run Build Script	2026-04-26T13:38:45.2224992Z 
+build	Run Build Script	2026-04-26T13:38:45.2237927Z device/qcom/sepolicy: Shared project LineageOS/android_device_qcom_sepolicy found, disabling pruning.
+build	Run Build Script	2026-04-26T13:38:45.2241990Z 
+build	Run Build Script	2026-04-26T13:38:45.2242505Z hardware/qcom/audio: Shared project LineageOS/android_hardware_qcom_audio found, disabling pruning.
+build	Run Build Script	2026-04-26T13:38:45.2271911Z 
+build	Run Build Script	2026-04-26T13:38:45.2272482Z hardware/qcom/display: Shared project LineageOS/android_hardware_qcom_display found, disabling pruning.
+build	Run Build Script	2026-04-26T13:38:45.2272877Z 
+build	Run Build Script	2026-04-26T13:38:45.2273355Z hardware/qcom/media: Shared project LineageOS/android_hardware_qcom_media found, disabling pruning.
+build	Run Build Script	2026-04-26T13:38:45.2273752Z 
+build	Run Build Script	2026-04-26T13:38:45.2274326Z vendor/nxp/opensource/pn5xx/halimpl: Shared project LineageOS/android_vendor_nxp_opensource_halimpl found, disabling pruning.
+build	Run Build Script	2026-04-26T13:38:45.2274959Z 
+build	Run Build Script	2026-04-26T13:38:45.2275472Z vendor/nxp/opensource/pn5xx/hidlimpl: Shared project LineageOS/android_vendor_nxp_opensource_hidlimpl found, disabling pruning.
+build	Run Build Script	2026-04-26T13:38:45.2276260Z repo sync has finished successfully.
+build	Run Build Script	2026-04-26T13:38:45.3293660Z >>> Applying our patched device tree & kernel...
+build	Run Build Script	2026-04-26T13:38:56.9171443Z >>> Building halium-boot and systemimage...
+build	Run Build Script	2026-04-26T13:39:11.4755436Z In file included from build/make/core/config.mk:291:
+build	Run Build Script	2026-04-26T13:39:11.4759466Z In file included from build/make/core/envsetup.mk:266:
+build	Run Build Script	2026-04-26T13:39:11.4822815Z [1mdevice/samsung/d2s/AndroidProducts.mk:21: [31merror: [0m[1mdevice/samsung/d2s: halium_d2s: Product not defined in this file.[0m
+build	Run Build Script	2026-04-26T13:39:11.4823770Z 13:39:11 dumpvars failed with: exit status 1
+build	Run Build Script	2026-04-26T13:39:12.8272814Z repo sync has finished successfully.
+build	Run Build Script	2026-04-26T13:39:13.9712443Z repo sync has finished successfully.
+build	Run Build Script	2026-04-26T13:39:14.0042954Z Device d2s not found. Attempting to retrieve device repository from LineageOS Github (http://github.com/LineageOS).
+build	Run Build Script	2026-04-26T13:39:14.0043761Z Found repository: android_device_samsung_d2s
+build	Run Build Script	2026-04-26T13:39:14.0044057Z Default revision: lineage-18.1
+build	Run Build Script	2026-04-26T13:39:14.0044287Z Checking branch info
+build	Run Build Script	2026-04-26T13:39:14.0044594Z Checking if device/samsung/d2s is fetched from android_device_samsung_d2s
+build	Run Build Script	2026-04-26T13:39:14.0045050Z LineageOS/android_device_samsung_d2s already fetched to device/samsung/d2s
+build	Run Build Script	2026-04-26T13:39:14.0045439Z Syncing repository to retrieve project.
+build	Run Build Script	2026-04-26T13:39:14.0045702Z Repository synced!
+build	Run Build Script	2026-04-26T13:39:14.0045938Z Looking for dependencies in device/samsung/d2s
+build	Run Build Script	2026-04-26T13:39:14.0046276Z Looking for dependencies in device/samsung/exynos9820-common
+build	Run Build Script	2026-04-26T13:39:14.0046593Z Adding dependencies to manifest
+build	Run Build Script	2026-04-26T13:39:14.0046978Z Checking if device/samsung_slsi/sepolicy is fetched from android_device_samsung_slsi_sepolicy
+build	Run Build Script	2026-04-26T13:39:14.0047580Z Adding dependency: LineageOS/android_device_samsung_slsi_sepolicy -> device/samsung_slsi/sepolicy
+build	Run Build Script	2026-04-26T13:39:14.0048086Z Using default branch for android_device_samsung_slsi_sepolicy
+build	Run Build Script	2026-04-26T13:39:14.0048508Z Checking if hardware/samsung/nfc is fetched from android_hardware_samsung_nfc
+build	Run Build Script	2026-04-26T13:39:14.0048996Z Adding dependency: LineageOS/android_hardware_samsung_nfc -> hardware/samsung/nfc
+build	Run Build Script	2026-04-26T13:39:14.0049414Z Using default branch for android_hardware_samsung_nfc
+build	Run Build Script	2026-04-26T13:39:14.0061305Z Syncing dependencies
+build	Run Build Script	2026-04-26T13:39:14.0061572Z Looking for dependencies in device/samsung_slsi/sepolicy
+build	Run Build Script	2026-04-26T13:39:14.0061952Z device/samsung_slsi/sepolicy has no additional dependencies.
+build	Run Build Script	2026-04-26T13:39:14.0062515Z Looking for dependencies in hardware/samsung
+build	Run Build Script	2026-04-26T13:39:14.0062808Z hardware/samsung has no additional dependencies.
+build	Run Build Script	2026-04-26T13:39:14.0063103Z Looking for dependencies in hardware/samsung/nfc
+build	Run Build Script	2026-04-26T13:39:14.0063412Z hardware/samsung/nfc has no additional dependencies.
+build	Run Build Script	2026-04-26T13:39:14.0063736Z Looking for dependencies in kernel/samsung/exynos9820
+build	Run Build Script	2026-04-26T13:39:14.0066559Z kernel/samsung/exynos9820 has no additional dependencies.
+build	Run Build Script	2026-04-26T13:39:14.0066849Z Done
+build	Run Build Script	2026-04-26T13:39:14.6174406Z In file included from build/make/core/config.mk:291:
+build	Run Build Script	2026-04-26T13:39:14.6175045Z In file included from build/make/core/envsetup.mk:266:
+build	Run Build Script	2026-04-26T13:39:14.6176252Z [1mbuild/make/core/product_config.mk:155: [31merror: [0m[1mCan not locate config makefile for product "halium_d2s".[0m
+build	Run Build Script	2026-04-26T13:39:14.6189602Z 13:39:14 dumpvars failed with: exit status 1
+build	Run Build Script	2026-04-26T13:39:14.8011583Z ##[error]Process completed with exit code 1.
+build	Post Checkout Code	﻿2026-04-26T13:39:14.9373185Z Post job cleanup.
+build	Post Checkout Code	2026-04-26T13:39:15.1141018Z [command]/usr/bin/git version
+build	Post Checkout Code	2026-04-26T13:39:15.1186044Z git version 2.53.0
+build	Post Checkout Code	2026-04-26T13:39:15.1231057Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/fac41495-6394-40ca-b81a-2f34be6edd56/.gitconfig'
+build	Post Checkout Code	2026-04-26T13:39:15.1241950Z Temporarily overriding HOME='/home/runner/work/_temp/fac41495-6394-40ca-b81a-2f34be6edd56' before making global git config changes
+build	Post Checkout Code	2026-04-26T13:39:15.1243976Z Adding repository directory to the temporary git global config as a safe directory
+build	Post Checkout Code	2026-04-26T13:39:15.1251643Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Ubuntu-Touch-Samsung-Galaxy-Note10-plus/Ubuntu-Touch-Samsung-Galaxy-Note10-plus
+build	Post Checkout Code	2026-04-26T13:39:15.1288894Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post Checkout Code	2026-04-26T13:39:15.1323693Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post Checkout Code	2026-04-26T13:39:15.5779674Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post Checkout Code	2026-04-26T13:39:15.5780713Z http.https://github.com/.extraheader
+build	Post Checkout Code	2026-04-26T13:39:15.5785048Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post Checkout Code	2026-04-26T13:39:15.5788249Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post Checkout Code	2026-04-26T13:39:15.5792342Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post Checkout Code	2026-04-26T13:39:15.5795098Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-04-26T13:39:15.7413163Z Cleaning up orphan processes
+build	Complete job	2026-04-26T13:39:15.8135412Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

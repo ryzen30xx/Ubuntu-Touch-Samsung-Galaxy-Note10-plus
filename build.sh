@@ -43,7 +43,7 @@ cp -r "$REPO_DIR/sources/kernel/samsung/exynos9820" kernel/samsung/exynos9820
 # 5. Build Halium
 echo ">>> Building halium-boot and systemimage..."
 source build/envsetup.sh
-lunch halium_d2s-userdebug
+lunch lineage_d2s-userdebug
 mka halium-boot systemimage
 
 echo ">>> Build completed successfully! Output is in out/target/product/d2s/"
