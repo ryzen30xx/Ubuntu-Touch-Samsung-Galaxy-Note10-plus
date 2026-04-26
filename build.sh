@@ -10,8 +10,8 @@ if [ -n "$GITHUB_WORKSPACE" ]; then
     WORKSPACE="$GITHUB_WORKSPACE/workspace"
     REPO_DIR="$GITHUB_WORKSPACE"
 else
-    WORKSPACE="/home/build/halium"
-    REPO_DIR="$WORKSPACE/Ubuntu-Touch-d2s"
+    WORKSPACE="workspace"
+    REPO_DIR="."
 fi
 
 mkdir -p "$WORKSPACE"
@@ -43,7 +43,7 @@ cp -r "$REPO_DIR/sources/kernel/samsung/exynos9820" kernel/samsung/exynos9820
 # 5. Build Halium
 echo ">>> Building halium-boot and systemimage..."
 source build/envsetup.sh
-lunch lineage_d2s-userdebug
+lunch halium_d2s-userdebug
 mka halium-boot systemimage
 
 echo ">>> Build completed successfully! Output is in out/target/product/d2s/"
