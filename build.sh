@@ -34,6 +34,12 @@ repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
 # 4. Apply our patched device tree & kernel
 echo ">>> Applying our patched device tree & kernel..."
+# Vá lỗi Soong: biến PATH_OVERRIDE_SOONG không xác định
+if [ -f "vendor/lineage/build/soong/Android.bp" ]; then
+    echo ">>> Patching vendor/lineage/build/soong/Android.bp..."
+    sed -i 's/$(PATH_OVERRIDE_SOONG)//g' vendor/lineage/build/soong/Android.bp
+fi
+
 # Chúng ta copy SAU KHI sync để đảm bảo không bị repo sync ghi đè
 rm -rf device/samsung/d2s
 rm -rf kernel/samsung/exynos9820
