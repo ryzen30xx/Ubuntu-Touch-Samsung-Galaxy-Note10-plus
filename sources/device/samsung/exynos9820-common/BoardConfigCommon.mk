@@ -59,6 +59,9 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
+BOARD_KERNEL_CMDLINE := console=ttySAC2,115200n8 androidboot.selinux=permissive hang_on_panic=1 loglevel=7
+BOARD_KERNEL_CMDLINE += androidboot.hardware=exynos9820 buildvariant=userdebug
+
 ## DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
