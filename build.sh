@@ -3,6 +3,7 @@ set -e
 
 echo "======================================"
 echo " Ubuntu Touch (d2s) Halium Builder "
+echo " Build Triggered by Gemini CLI "
 echo "======================================"
 
 # Determine workspace (GitHub Actions vs Docker)
