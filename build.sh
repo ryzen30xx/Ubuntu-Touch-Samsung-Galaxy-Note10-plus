@@ -47,6 +47,11 @@ if [ -f "vendor/lineage/build/soong/Android.bp" ]; then
     sed -i 's/$(TARGET_KERNEL_SOURCE)/kernel\/samsung\/exynos9820/g' vendor/lineage/build/soong/Android.bp
     sed -i 's/$(KERNEL_BUILD_OUT_PREFIX)//g' vendor/lineage/build/soong/Android.bp
     sed -i 's/$(CLANG_TRIPLE)//g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(KERNEL_ARCH)/arm64/g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(KERNEL_2ND_ARCH)/arm/g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(KERNEL_CROSS_COMPILE)//g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(KERNEL_CC)//g' vendor/lineage/build/soong/Android.bp
+    sed -i 's/$(KERNEL_CLANG_TRIPLE)//g' vendor/lineage/build/soong/Android.bp
 fi
 
 # Chúng ta copy SAU KHI sync để đảm bảo không bị repo sync ghi đè
