@@ -71,7 +71,8 @@ echo ">>> Building halium-boot and systemimage..."
 export LINEAGE_SKIP_DEVICE_CHECK=true
 export SKIP_ROOMSERVICE=true
 export LINEAGE_BUILD_OFFLINE=true
-# Giới hạn RAM cho Java (Soong/Metalava)
+# Giới hạn RAM và chống phân mảnh bộ nhớ
+export MALLOC_ARENA_MAX=2
 export _JAVA_OPTIONS="-Xmx4g"
 source build/envsetup.sh
 
