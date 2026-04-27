@@ -44,11 +44,12 @@ if [ -d "vendor/samsung" ]; then
     cd ../..
 fi
 
-# Phẫu thuật device/: Chỉ giữ lại samsung, common và generic
+# Phẫu thuật device/: Chỉ giữ lại samsung, samsung_slsi, lineage và generic
 if [ -d "device" ]; then
     echo ">>> Pruning unnecessary device trees..."
     cd device
-    find . -maxdepth 1 -type d -not -name "." -not -name "samsung" -not -name "generic" -not -name "common" -exec rm -rf {} +
+    # Phải giữ lại lineage vì nó chứa sepolicy chung
+    find . -maxdepth 1 -type d -not -name "." -not -name "samsung" -not -name "samsung_slsi" -not -name "lineage" -not -name "generic" -not -name "common" -exec rm -rf {} +
     cd ..
 fi
 
