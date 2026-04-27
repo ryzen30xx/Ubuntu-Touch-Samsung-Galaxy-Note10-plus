@@ -37,15 +37,30 @@ echo ">>> Applying our patched device tree & kernel..."
 
 # Phẫu thuật vendor/samsung: Chỉ giữ lại d2s và exynos9820-common
 if [ -d "vendor/samsung" ]; then
-    echo ">>> Pruning unnecessary vendor blobs to save RAM and Disk..."
+    echo ">>> Pruning unnecessary vendor blobs..."
     cd vendor/samsung
-    # Giữ lại d2s, exynos9820-common và các tệp quan trọng, xóa phần còn lại
     find . -maxdepth 1 -type d -not -name "." -not -name "d2s" -not -name "exynos9820-common" -exec rm -rf {} +
     cd ../..
 fi
 
-# Xóa các thư mục .git để tiết kiệm dung lượng đĩa (rất quan trọng cho CI)
-echo ">>> Pruning .git directories to save space..."
+# Phẫu thuật device/: Chỉ giữ lại samsung, common và generic
+if [ -d "device" ]; then
+    echo ">>> Pruning unnecessary device trees..."
+    cd device
+    find . -maxdepth 1 -type d -not -name "." -not -name "samsung" -not -name "generic" -not -name "common" -exec rm -rf {} +
+    cd ..
+fi
+
+# Phẫu thuật vendor/: Chỉ giữ lại samsung và lineage
+if [ -d "vendor" ]; then
+    echo ">>> Pruning unnecessary vendors..."
+    cd vendor
+    find . -maxdepth 1 -type d -not -name "." -not -name "samsung" -not -name "lineage" -exec rm -rf {} +
+    cd ..
+fi
+
+# Xóa các thư mục .git để tiết kiệm dung lượng đĩa
+echo ">>> Pruning .git directories..."
 find . -name ".git" -type d -prune -exec rm -rf {} +
 
 # Vá lỗi Soong: loại bỏ các biến không xác định của LineageOS
@@ -84,6 +99,8 @@ export LINEAGE_BUILD_OFFLINE=true
 # Giới hạn RAM và chống phân mảnh bộ nhớ
 export MALLOC_ARENA_MAX=2
 export _JAVA_OPTIONS="-Xmx4g"
+# Tối ưu hóa bộ nhớ cho trình dựng Soong (Go)
+export GOGC=50
 source build/envsetup.sh
 
 # Sử dụng lunch với sản phẩm cụ thể
